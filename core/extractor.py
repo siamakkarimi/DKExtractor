@@ -49,6 +49,9 @@ class Extractor:
             field_name=str(ref["label"]); occurrence=int(ref["occurrence"]); container=self._locate_field_container(stage,field_name,occurrence)
             if container is None:
                 logger.warning("%s.field.missing field=%s occurrence=%s",stage,field_name,occurrence); results.append({"field":field_name,"items":[]}); logger.warning("%s.field.final_empty field=%s reason=missing-container",stage,field_name); continue
+            if stage=="step2" and self._should_skip_step2_container(container,field_name):
+                logger.info("step2.skip.preclick field=%s source=extract",self._get_step2_skip_label(container,field_name))
+                continue
             field_type=self._detect_dropdown_type(container); logger.info("%s.field.detected field=%s type=%s",stage,field_name,field_type)
             if self._is_disabled(container):
                 logger.info("%s.field.skip field=%s type=%s reason=disabled",stage,field_name,field_type); continue
@@ -89,8 +92,8 @@ class Extractor:
             if self._candidate_trigger_from_container(container) is None: continue
             label=self._find_label_text(container)
             if not label: continue
-            if self._should_skip_step2_field(label):
-                logger.info("step2.skip field=%s",label)
+            if self._should_skip_step2_container(container,label):
+                logger.info("step2.skip.preclick field=%s source=list",self._get_step2_skip_label(container,label))
                 continue
             counters[label]+=1; fields.append({"label":label,"occurrence":counters[label]})
         return fields
@@ -191,7 +194,7 @@ class Extractor:
     def _select_brand(self)->str|None:
         brand_inputs=self._find_elements(By.NAME,"brand_id")
         if not brand_inputs: logger.info("step2.brand.skip reason=missing"); return None
-        logger.info("step2.skip field=%s","\u0628\u0631\u0646\u062f")
+        logger.info("step2.required.exempt field=%s","\u0628\u0631\u0646\u062f")
         return None
         brand_input=brand_inputs[0]; current_value=(brand_input.get_attribute("value") or "").strip()
         if current_value: logger.info("step2.brand.skip reason=already-selected"); return current_value
@@ -221,8 +224,8 @@ class Extractor:
             if container is None or self._is_disabled(container): 
                 if container is not None: logger.info("step2.fill.skip field=%s reason=disabled",field_name)
                 continue
-            if self._should_skip_step2_field(field_name):
-                logger.info("step2.skip field=%s",field_name)
+            if self._should_skip_step2_container(container,field_name):
+                logger.info("step2.skip.preclick field=%s source=fill",self._get_step2_skip_label(container,field_name))
                 continue
             if self._is_already_populated(container): logger.info("step2.fill.skip field=%s reason=already-populated",field_name); continue
             trigger=self._find_dropdown_trigger(container)
@@ -273,6 +276,13 @@ class Extractor:
     def _should_skip_step2_field(self,label:str)->bool:
         normalized=self._normalize_label(label)
         return any(token in normalized for token in STEP2_SKIP_FIELD_TOKENS)
+    def _should_skip_step2_container(self,container:WebElement,label:str="")->bool:
+        if container.find_elements(By.NAME,"brand_id"): return True
+        return self._should_skip_step2_field(label) or self._should_skip_step2_field(self._find_label_text(container))
+    def _get_step2_skip_label(self,container:WebElement,label:str="")->str:
+        visible=label or self._find_label_text(container)
+        normalized=self._normalize_label(visible)
+        return normalized or "\u0628\u0631\u0646\u062f"
     def _is_already_populated(self,container:WebElement)->bool:
         if container.find_elements(By.XPATH,f".//span[normalize-space()='{PLACEHOLDER_TEXT}']"): return False
         chips=container.find_elements(By.XPATH,".//*[contains(@class,'chip') or contains(@class,'tag')]")

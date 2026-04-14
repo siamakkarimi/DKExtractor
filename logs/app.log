@@ -1143,3 +1143,141 @@ Stacktrace:
 	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
 	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
 
+2026-04-14 22:09:32 | INFO | core.logging_config | ============================================================
+2026-04-14 22:09:32 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:09:32 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:09:32 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:09:32 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:09:32 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:09:32 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:09:34 | INFO | core.logging_config | ============================================================
+2026-04-14 22:09:34 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:09:34 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:09:34 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:09:34 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:09:34 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:09:34 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:09:34 | INFO | ui.main_window | Application started
+2026-04-14 22:09:35 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:09:45 | INFO | core.worker | Launching browser runtime
+2026-04-14 22:09:45 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 22:09:45 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 22:09:45 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 22:09:47 | INFO | core.session | navigating to Digikala
+2026-04-14 22:09:50 | INFO | core.session | login confirmed
+2026-04-14 22:09:50 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 22:09:53 | INFO | core.session | Login-only flow stopped by user request
+2026-04-14 22:09:59 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:09:59 | INFO | core.worker | Launching browser runtime
+2026-04-14 22:09:59 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 22:09:59 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 22:09:59 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 22:10:01 | INFO | core.session | navigating to Digikala
+2026-04-14 22:10:04 | INFO | core.session | login confirmed
+2026-04-14 22:10:04 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 22:10:04 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:10:04 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 22:10:05 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:10:05 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:10:06 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:10:06 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:10:08 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:10:10 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:10:10 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:10:12 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:10:19 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:10:20 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:10:21 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:10:29 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:10:30 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:10:31 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:10:39 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:10:39 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 22:10:39 | INFO | core.extractor | step2.required.exempt field=برند
+2026-04-14 22:10:39 | INFO | core.extractor | step2.fill.brand product=کانتور selected=
+2026-04-14 22:10:39 | INFO | core.extractor | step2.model.filled
+2026-04-14 22:10:40 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:10:42 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:10:49 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-14 22:10:51 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:10:59 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-14 22:11:00 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:11:07 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-14 22:11:09 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:11:16 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-14 22:11:17 | INFO | core.extractor | step2.number.filled index=1
+2026-04-14 22:11:17 | INFO | core.extractor | step2.number.filled index=2
+2026-04-14 22:11:18 | INFO | core.extractor | step2.number.filled index=3
+2026-04-14 22:11:18 | INFO | core.extractor | step2.number.filled index=4
+2026-04-14 22:11:18 | INFO | core.extractor | step2.continue.clicked
+2026-04-14 22:11:48 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: 
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 33, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 39, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 248, in _advance_to_step3
+    self.wait.until(lambda _:"/product/create/3" in self.driver.current_url); self._ensure_step3_panel_open(); self._wait_for_step3_ready()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2026-04-14 22:11:48 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:11:49 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-14 22:11:50 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:11:50 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:11:51 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:11:51 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:11:53 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:12:00 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:12:01 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:12:02 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:12:10 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:12:11 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:12:12 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:12:20 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:12:20 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:12:22 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:12:29 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:12:29 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-14 22:12:29 | INFO | core.extractor | step2.required.exempt field=برند
+2026-04-14 22:12:29 | INFO | core.extractor | step2.fill.brand product=هایلایتر selected=
+2026-04-14 22:12:30 | INFO | core.extractor | step2.model.filled
+2026-04-14 22:12:30 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:12:32 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:12:40 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-14 22:12:42 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:12:49 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-14 22:12:51 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:12:58 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-14 22:12:59 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:13:07 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-14 22:13:07 | INFO | core.extractor | step2.number.filled index=1
+2026-04-14 22:13:08 | INFO | core.extractor | step2.number.filled index=2
+2026-04-14 22:13:08 | INFO | core.extractor | step2.number.filled index=3
+2026-04-14 22:13:08 | INFO | core.extractor | step2.number.filled index=4
+2026-04-14 22:13:09 | INFO | core.extractor | step2.continue.clicked
+2026-04-14 22:13:39 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: 
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 33, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 39, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 248, in _advance_to_step3
+    self.wait.until(lambda _:"/product/create/3" in self.driver.current_url); self._ensure_step3_panel_open(); self._wait_for_step3_ready()
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
