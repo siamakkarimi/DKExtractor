@@ -1,0 +1,750 @@
+2026-04-10 13:18:57 | INFO | core.logging_config | ============================================================
+2026-04-10 13:18:57 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:18:57 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:18:57 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:18:57 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:18:57 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:18:57 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:19:11 | INFO | core.logging_config | ============================================================
+2026-04-10 13:19:11 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:19:11 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:19:11 | INFO | core.logging_config | Working dir: C:\
+2026-04-10 13:19:11 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:19:11 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:19:11 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:19:22 | INFO | core.logging_config | ============================================================
+2026-04-10 13:19:22 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:19:22 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:19:22 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:19:22 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:19:22 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:19:22 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:19:22 | ERROR | core.driver | Bundled Chrome binary not found at: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-10 13:19:31 | INFO | core.logging_config | ============================================================
+2026-04-10 13:19:31 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:19:31 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:19:31 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:19:31 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:19:31 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:19:31 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:19:31 | ERROR | traceback_test | Traceback probe
+Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ZeroDivisionError: division by zero
+2026-04-10 13:21:24 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:24 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:24 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:24 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:21:24 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:24 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:24 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:24 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:24 | INFO | core.logging_config | Working dir: C:\
+2026-04-10 13:21:24 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:24 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:24 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:24 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:21:24 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:24 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:24 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:21:37 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:37 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:37 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:37 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:21:37 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:37 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:37 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:37 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:21:38 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:38 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:38 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:38 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:21:38 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:38 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:38 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:38 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:21:38 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:38 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:38 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:38 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:21:38 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:38 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:38 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:38 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:21:53 | INFO | core.logging_config | ============================================================
+2026-04-10 13:21:53 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:21:53 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:21:53 | INFO | core.logging_config | Working dir: C:\
+2026-04-10 13:21:53 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:21:53 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:21:53 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:21:53 | ERROR | core.driver | Bundled Chrome binary not found at: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-10 13:22:06 | INFO | core.logging_config | ============================================================
+2026-04-10 13:22:06 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:22:06 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:22:06 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:22:06 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:22:06 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:22:06 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:22:07 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-10 13:22:07 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-10 13:22:07 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-10 13:22:07 | ERROR | core.driver | Unexpected browser startup failure
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\driver.py", line 83, in create_driver
+    return _launch_chrome(primary_profile)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\driver.py", line 48, in _launch_chrome
+    return webdriver.Chrome(service=service, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 55, in __init__
+    self.service.start()
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\service.py", line 106, in start
+    self._start_process(self._path)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\service.py", line 221, in _start_process
+    self.process = subprocess.Popen(
+                   ^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1024, in __init__
+    self._execute_child(args, executable, preexec_fn, close_fds,
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\subprocess.py", line 1509, in _execute_child
+    hp, ht, pid, tid = _winapi.CreateProcess(executable, args,
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+OSError: [WinError 193] %1 is not a valid Win32 application
+2026-04-10 13:49:03 | INFO | core.logging_config | ============================================================
+2026-04-10 13:49:03 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:49:03 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:49:03 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:49:03 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:49:03 | INFO | core.logging_config | ============================================================
+2026-04-10 13:49:03 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:49:03 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:49:03 | INFO | core.logging_config | Working dir: C:\
+2026-04-10 13:49:03 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:49:03 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:49:03 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:49:03 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:49:03 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:49:03 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:49:03 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 13:49:18 | INFO | core.logging_config | ============================================================
+2026-04-10 13:49:18 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 13:49:18 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 13:49:18 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 13:49:18 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 13:49:18 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 13:49:18 | INFO | core.logging_config | Frozen: False
+2026-04-10 13:49:18 | ERROR | app.main | PySide6 is not installed. Install dependencies with 'python -m pip install -r requirements.txt'.
+2026-04-10 14:41:03 | INFO | core.logging_config | ============================================================
+2026-04-10 14:41:03 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:41:03 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:41:03 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 14:41:03 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:41:03 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:41:03 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:41:18 | INFO | core.logging_config | ============================================================
+2026-04-10 14:41:18 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:41:18 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:41:18 | INFO | core.logging_config | Working dir: C:\
+2026-04-10 14:41:18 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:41:18 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:41:18 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:41:49 | INFO | core.logging_config | ============================================================
+2026-04-10 14:41:49 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:41:49 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:41:49 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 14:41:49 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:41:49 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:41:49 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:41:54 | INFO | core.logging_config | ============================================================
+2026-04-10 14:41:54 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:41:54 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:41:54 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 14:41:54 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:41:54 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:41:54 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:42:08 | INFO | core.logging_config | ============================================================
+2026-04-10 14:42:08 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:42:08 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:42:08 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 14:42:08 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:42:08 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:42:08 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:42:30 | INFO | core.logging_config | ============================================================
+2026-04-10 14:42:30 | INFO | core.logging_config | DKExtractor startup
+2026-04-10 14:42:30 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-10 14:42:30 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-10 14:42:30 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-10 14:42:30 | INFO | core.logging_config | Platform: Windows 10
+2026-04-10 14:42:30 | INFO | core.logging_config | Frozen: False
+2026-04-10 14:42:32 | INFO | core.worker | Launching browser runtime
+2026-04-10 14:42:32 | ERROR | core.driver | Bundled Chrome binary not found at: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-10 14:42:32 | ERROR | core.worker | Driver startup failed
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 55, in run
+    driver = create_driver()
+             ^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\driver.py", line 68, in create_driver
+    raise DriverStartupError(
+core.driver.DriverStartupError: Browser runtime files are missing. Please reinstall DKExtractor.
+2026-04-14 08:48:04 | INFO | core.logging_config | ============================================================
+2026-04-14 08:48:04 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 08:48:04 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 08:48:04 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 08:48:04 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 08:48:05 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 08:48:05 | INFO | core.logging_config | Frozen: False
+2026-04-14 08:48:22 | INFO | core.logging_config | ============================================================
+2026-04-14 08:48:22 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 08:48:22 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 08:48:22 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 08:48:22 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 08:48:22 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 08:48:22 | INFO | core.logging_config | Frozen: False
+2026-04-14 08:48:22 | INFO | ui.main_window | Application started
+2026-04-14 08:48:25 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:07:57 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:07:57 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:07:57 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:07:57 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:08:02 | ERROR | core.driver | Primary Chrome startup failed
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\driver.py", line 83, in create_driver
+    return _launch_chrome(primary_profile)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\driver.py", line 48, in _launch_chrome
+    return webdriver.Chrome(service=service, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 271, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 147
+Current browser version is 146.0.7680.180 with binary path D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7ba930295+146d5]
+	chromedriver!GetHandleVerifier [0x7ff7ba930300+14740]
+	chromedriver!(No symbol) [0x7ff7ba69d7cd]
+	chromedriver!(No symbol) [0x7ff7ba6e59bd]
+	chromedriver!(No symbol) [0x7ff7ba6e4705]
+	chromedriver!(No symbol) [0x7ff7ba6dea81]
+	chromedriver!(No symbol) [0x7ff7ba6d9559]
+	chromedriver!(No symbol) [0x7ff7ba72dc21]
+	chromedriver!(No symbol) [0x7ff7ba72d486]
+	chromedriver!(No symbol) [0x7ff7ba6e9018]
+	chromedriver!(No symbol) [0x7ff7ba6e9f03]
+	chromedriver!GetHandleVerifier [0x7ff7bac45949+329d89]
+	chromedriver!GetHandleVerifier [0x7ff7bac3fe96+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7bac63102+347542]
+	chromedriver!GetHandleVerifier [0x7ff7ba94d425+31865]
+	chromedriver!GetHandleVerifier [0x7ff7ba95605c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff7ba939684+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff7ba939836+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff7ba91e347+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 09:08:03 | ERROR | core.worker | Driver startup failed
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\driver.py", line 83, in create_driver
+    return _launch_chrome(primary_profile)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\driver.py", line 48, in _launch_chrome
+    return webdriver.Chrome(service=service, options=options)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chrome\webdriver.py", line 45, in __init__
+    super().__init__(
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\chromium\webdriver.py", line 66, in __init__
+    super().__init__(command_executor=executor, options=self.options)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\common\webdriver.py", line 25, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 271, in __init__
+    self.start_session(capabilities)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 366, in start_session
+    response = self.execute(Command.NEW_SESSION, caps)["value"]
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.SessionNotCreatedException: Message: session not created: This version of ChromeDriver only supports Chrome version 147
+Current browser version is 146.0.7680.180 with binary path D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#sessionnotcreatedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7ba930295+146d5]
+	chromedriver!GetHandleVerifier [0x7ff7ba930300+14740]
+	chromedriver!(No symbol) [0x7ff7ba69d7cd]
+	chromedriver!(No symbol) [0x7ff7ba6e59bd]
+	chromedriver!(No symbol) [0x7ff7ba6e4705]
+	chromedriver!(No symbol) [0x7ff7ba6dea81]
+	chromedriver!(No symbol) [0x7ff7ba6d9559]
+	chromedriver!(No symbol) [0x7ff7ba72dc21]
+	chromedriver!(No symbol) [0x7ff7ba72d486]
+	chromedriver!(No symbol) [0x7ff7ba6e9018]
+	chromedriver!(No symbol) [0x7ff7ba6e9f03]
+	chromedriver!GetHandleVerifier [0x7ff7bac45949+329d89]
+	chromedriver!GetHandleVerifier [0x7ff7bac3fe96+3242d6]
+	chromedriver!GetHandleVerifier [0x7ff7bac63102+347542]
+	chromedriver!GetHandleVerifier [0x7ff7ba94d425+31865]
+	chromedriver!GetHandleVerifier [0x7ff7ba95605c+3a49c]
+	chromedriver!GetHandleVerifier [0x7ff7ba939684+1dac4]
+	chromedriver!GetHandleVerifier [0x7ff7ba939836+1dc76]
+	chromedriver!GetHandleVerifier [0x7ff7ba91e347+2787]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 55, in run
+    driver = create_driver()
+             ^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\driver.py", line 100, in create_driver
+    raise DriverStartupError(
+core.driver.DriverStartupError: Browser could not start. Check bundled runtime files and try again.
+2026-04-14 09:27:13 | INFO | core.logging_config | ============================================================
+2026-04-14 09:27:13 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:27:13 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:27:13 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:27:13 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:27:13 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:27:13 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:27:16 | INFO | core.logging_config | ============================================================
+2026-04-14 09:27:16 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:27:16 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:27:16 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:27:16 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:27:16 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:27:16 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:27:16 | INFO | ui.main_window | Application started
+2026-04-14 09:27:16 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:31:16 | INFO | core.logging_config | ============================================================
+2026-04-14 09:31:16 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:31:16 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:31:16 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:31:16 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:31:16 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:31:16 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:31:19 | INFO | core.logging_config | ============================================================
+2026-04-14 09:31:19 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:31:19 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:31:19 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:31:19 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:31:19 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:31:19 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:31:19 | INFO | ui.main_window | Application started
+2026-04-14 09:31:19 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:31:26 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:31:26 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:31:26 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:31:26 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:39:35 | INFO | core.logging_config | ============================================================
+2026-04-14 09:39:35 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:39:35 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:39:35 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:39:35 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:39:35 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:39:35 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:39:39 | INFO | core.logging_config | ============================================================
+2026-04-14 09:39:39 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:39:39 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:39:39 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:39:39 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:39:39 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:39:39 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:39:39 | INFO | ui.main_window | Application started
+2026-04-14 09:39:40 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:39:47 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:39:47 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:39:47 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:39:47 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:39:52 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 09:47:09 | INFO | core.logging_config | ============================================================
+2026-04-14 09:47:09 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:47:09 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:47:09 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:47:09 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:47:09 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:47:09 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:47:13 | INFO | core.logging_config | ============================================================
+2026-04-14 09:47:13 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:47:13 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:47:13 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:47:13 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:47:13 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:47:13 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:47:13 | INFO | ui.main_window | Application started
+2026-04-14 09:47:14 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:47:23 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:47:23 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:47:23 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:47:23 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:47:27 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 09:56:39 | INFO | core.logging_config | ============================================================
+2026-04-14 09:56:39 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:56:39 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:56:39 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:56:39 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:56:39 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:56:39 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:56:42 | INFO | core.logging_config | ============================================================
+2026-04-14 09:56:42 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 09:56:42 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 09:56:42 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 09:56:42 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 09:56:42 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 09:56:42 | INFO | core.logging_config | Frozen: False
+2026-04-14 09:56:42 | INFO | ui.main_window | Application started
+2026-04-14 09:56:42 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 09:56:46 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:56:46 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:56:46 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:56:46 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:56:50 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 09:57:23 | INFO | core.worker | Launching browser runtime
+2026-04-14 09:57:23 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 09:57:23 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 09:57:23 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 09:57:27 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 10:11:05 | INFO | core.logging_config | ============================================================
+2026-04-14 10:11:05 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:11:05 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:11:05 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:11:05 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:11:05 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:11:05 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:11:08 | INFO | core.logging_config | ============================================================
+2026-04-14 10:11:08 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:11:08 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:11:08 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:11:08 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:11:08 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:11:08 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:11:08 | INFO | ui.main_window | Application started
+2026-04-14 10:11:08 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 10:12:28 | INFO | core.logging_config | ============================================================
+2026-04-14 10:12:28 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:12:28 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:12:28 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:12:28 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:12:28 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:12:28 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:12:31 | INFO | core.logging_config | ============================================================
+2026-04-14 10:12:31 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:12:31 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:12:31 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:12:31 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:12:31 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:12:31 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:12:31 | INFO | ui.main_window | Application started
+2026-04-14 10:12:31 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 10:12:38 | INFO | core.worker | Launching browser runtime
+2026-04-14 10:12:38 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 10:12:38 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 10:13:12 | INFO | core.logging_config | ============================================================
+2026-04-14 10:13:12 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:13:12 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:13:12 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:13:12 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:13:12 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:13:12 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:13:15 | INFO | core.logging_config | ============================================================
+2026-04-14 10:13:15 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 10:13:15 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 10:13:15 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 10:13:15 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 10:13:15 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 10:13:15 | INFO | core.logging_config | Frozen: False
+2026-04-14 10:13:15 | INFO | ui.main_window | Application started
+2026-04-14 10:13:15 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=1 invalid=0
+2026-04-14 10:13:33 | INFO | core.worker | Launching browser runtime
+2026-04-14 10:13:33 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 10:13:33 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 10:13:33 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 10:13:38 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 10:22:50 | INFO | core.session | Login-only flow stopped by user request
+2026-04-14 10:23:05 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 10:24:05 | INFO | core.worker | Launching browser runtime
+2026-04-14 10:24:05 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 10:24:05 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 10:24:05 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 10:24:09 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 10:55:54 | INFO | core.session | Login-only flow stopped by user request
+2026-04-14 10:56:29 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 10:56:29 | INFO | core.worker | Launching browser runtime
+2026-04-14 10:56:29 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 10:56:29 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 10:56:29 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 10:56:39 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 10:56:39 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 10:57:50 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: 
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2 = extractor.extract_step2()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 29, in extract_step2
+    dropdowns = self.wait.until(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2026-04-14 10:57:50 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 10:58:58 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: 
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2 = extractor.extract_step2()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 29, in extract_step2
+    dropdowns = self.wait.until(
+                ^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 121, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+2026-04-14 10:59:03 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 10:59:03 | INFO | core.worker | Launching browser runtime
+2026-04-14 10:59:03 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 10:59:03 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 10:59:03 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 10:59:08 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 10:59:08 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 10:59:44 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 11:05:56 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 11:05:56 | INFO | core.worker | Launching browser runtime
+2026-04-14 11:05:56 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 11:05:56 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 11:05:56 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 11:06:00 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 11:06:00 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 11:06:37 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 13:32:56 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 13:32:56 | INFO | core.worker | Launching browser runtime
+2026-04-14 13:32:56 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 13:32:56 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 13:32:56 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 13:33:00 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 13:33:00 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 13:33:37 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 14:19:44 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 14:19:44 | INFO | core.worker | Launching browser runtime
+2026-04-14 14:19:44 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 14:19:44 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 14:19:44 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data
+2026-04-14 14:19:48 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 14:19:48 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 14:20:25 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 15:32:56 | INFO | core.logging_config | ============================================================
+2026-04-14 15:32:56 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 15:32:56 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 15:32:56 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 15:32:56 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 15:32:56 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 15:32:56 | INFO | core.logging_config | Frozen: False
+2026-04-14 15:33:11 | INFO | core.logging_config | ============================================================
+2026-04-14 15:33:11 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 15:33:11 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 15:33:11 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 15:33:11 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 15:33:11 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 15:33:11 | INFO | core.logging_config | Frozen: False
+2026-04-14 15:33:11 | INFO | ui.main_window | Application started
+2026-04-14 15:33:15 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 15:33:23 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 15:33:23 | INFO | core.worker | Launching browser runtime
+2026-04-14 15:33:23 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 15:33:23 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 15:33:23 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data-runs\run-1776168203763
+2026-04-14 15:33:27 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 15:33:27 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 15:33:38 | INFO | core.logging_config | ============================================================
+2026-04-14 15:33:38 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 15:33:38 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 15:33:38 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 15:33:38 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 15:33:38 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 15:33:38 | INFO | core.logging_config | Frozen: False
+2026-04-14 15:33:41 | INFO | core.logging_config | ============================================================
+2026-04-14 15:33:41 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 15:33:41 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 15:33:41 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 15:33:41 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 15:33:41 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 15:33:41 | INFO | core.logging_config | Frozen: False
+2026-04-14 15:33:41 | INFO | ui.main_window | Application started
+2026-04-14 15:33:41 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 15:33:46 | INFO | core.worker | Launching browser runtime
+2026-04-14 15:33:46 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 15:33:46 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 15:33:46 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data-runs\run-1776168226312
+2026-04-14 15:33:50 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 15:34:33 | INFO | core.session | Login-only flow stopped by user request
+2026-04-14 15:34:39 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 15:34:39 | INFO | core.worker | Launching browser runtime
+2026-04-14 15:34:39 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 15:34:39 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 15:34:39 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data-runs\run-1776168279217
+2026-04-14 15:34:43 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 15:34:43 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 15:34:43 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 15:35:11 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044db2d]
+	chromedriver!(No symbol) [0x7ff7b0438ca2]
+	chromedriver!(No symbol) [0x7ff7b045f416]
+	chromedriver!(No symbol) [0x7ff7b04d70e0]
+	chromedriver!(No symbol) [0x7ff7b04f3482]
+	chromedriver!(No symbol) [0x7ff7b0499298]
+	chromedriver!(No symbol) [0x7ff7b049a183]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7b06f3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7b06f37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7b06d7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 55, in extract_product
+    self._wait_for_step2_ready()
+  File "D:\DKExtractor\core\extractor.py", line 214, in _wait_for_step2_ready
+    self.wait.until(_ready)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 208, in _ready
+    if "/product/create/2" not in self.driver.current_url:
+                                  ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 556, in current_url
+    return self.execute(Command.GET_CURRENT_URL)["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044db2d]
+	chromedriver!(No symbol) [0x7ff7b0438ca2]
+	chromedriver!(No symbol) [0x7ff7b045f416]
+	chromedriver!(No symbol) [0x7ff7b04d70e0]
+	chromedriver!(No symbol) [0x7ff7b04f3482]
+	chromedriver!(No symbol) [0x7ff7b0499298]
+	chromedriver!(No symbol) [0x7ff7b049a183]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7b06f3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7b06f37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7b06d7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 15:35:11 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 15:35:11 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044d916]
+	chromedriver!(No symbol) [0x7ff7b0498313]
+	chromedriver!(No symbol) [0x7ff7b04cfe92]
+	chromedriver!(No symbol) [0x7ff7b04ca011]
+	chromedriver!(No symbol) [0x7ff7b04c92c3]
+	chromedriver!(No symbol) [0x7ff7b0416565]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7b041532a]
+	chromedriver!GetHandleVerifier [0x7ff7b0b44b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 15:35:13 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044d916]
+	chromedriver!(No symbol) [0x7ff7b0498313]
+	chromedriver!(No symbol) [0x7ff7b04cfe92]
+	chromedriver!(No symbol) [0x7ff7b04ca011]
+	chromedriver!(No symbol) [0x7ff7b04c92c3]
+	chromedriver!(No symbol) [0x7ff7b0416565]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7b041532a]
+	chromedriver!GetHandleVerifier [0x7ff7b0b44b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 15:35:15 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044d916]
+	chromedriver!(No symbol) [0x7ff7b0498313]
+	chromedriver!(No symbol) [0x7ff7b04cfe92]
+	chromedriver!(No symbol) [0x7ff7b04ca011]
+	chromedriver!(No symbol) [0x7ff7b04c92c3]
+	chromedriver!(No symbol) [0x7ff7b0416565]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7b041532a]
+	chromedriver!GetHandleVerifier [0x7ff7b0b44b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 15:35:17 | ERROR | core.worker | Navigation failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918 | last_error=Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7b09c29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7b06ea0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7b044d916]
+	chromedriver!(No symbol) [0x7ff7b0498313]
+	chromedriver!(No symbol) [0x7ff7b04cfe92]
+	chromedriver!(No symbol) [0x7ff7b04ca011]
+	chromedriver!(No symbol) [0x7ff7b04c92c3]
+	chromedriver!(No symbol) [0x7ff7b0416565]
+	chromedriver!GetHandleVerifier [0x7ff7b09ede0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7b09e8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7b0a09d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7b0706785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7b070facc+3a88c]
+	chromedriver!(No symbol) [0x7ff7b041532a]
+	chromedriver!GetHandleVerifier [0x7ff7b0b44b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
