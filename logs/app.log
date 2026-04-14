@@ -1281,3 +1281,400 @@ Traceback (most recent call last):
     raise TimeoutException(message, screen, stacktrace)
 selenium.common.exceptions.TimeoutException: Message: 
 
+2026-04-14 22:29:44 | INFO | core.logging_config | ============================================================
+2026-04-14 22:29:44 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:29:44 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:29:44 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:29:44 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:29:44 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:29:44 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:29:46 | INFO | core.logging_config | ============================================================
+2026-04-14 22:29:46 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:29:46 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:29:46 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:29:46 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:29:46 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:29:46 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:29:46 | INFO | ui.main_window | Application started
+2026-04-14 22:29:47 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:30:24 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:30:24 | INFO | core.worker | Launching browser runtime
+2026-04-14 22:30:24 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 22:30:24 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 22:30:24 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 22:30:26 | INFO | core.session | navigating to Digikala
+2026-04-14 22:30:28 | INFO | core.session | login confirmed
+2026-04-14 22:30:28 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 22:30:28 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:30:28 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 22:30:30 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:30:30 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:30:31 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:30:31 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:30:32 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:30:34 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:30:35 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:30:36 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:30:44 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:30:45 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:30:46 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:30:54 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:30:54 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:30:55 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:31:03 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:31:03 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 22:31:03 | INFO | core.extractor | step2.brand.default.required
+2026-04-14 22:31:33 | INFO | core.extractor | trigger.invalid field=برند یا نام سازنده کالا
+2026-04-14 22:31:33 | WARNING | core.extractor | step2.brand.default.failed reason=no-trigger
+2026-04-14 22:31:33 | INFO | core.extractor | step2.fill.brand product=کانتور selected=
+2026-04-14 22:31:34 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 505). Other element would receive the click: <p class="text-body-2 color-n-500 d-flex gap-x-1">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 34, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 40, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 268, in _fill_model_input
+    self._scroll_into_view(model_input); model_input.click(); model_input.clear(); model_input.send_keys("12"); logger.info("step2.model.filled")
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 114, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 508, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 505). Other element would receive the click: <p class="text-body-2 color-n-500 d-flex gap-x-1">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 22:31:34 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:31:35 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-14 22:31:36 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:31:36 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:31:37 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:31:37 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:31:39 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:31:46 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:31:47 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:31:48 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:31:56 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:31:56 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:31:58 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:32:06 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:32:06 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:32:07 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:32:15 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:32:15 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-14 22:32:15 | INFO | core.extractor | step2.brand.default.required
+2026-04-14 22:32:42 | INFO | core.extractor | trigger.invalid field=برند یا نام سازنده کالا
+2026-04-14 22:32:42 | WARNING | core.extractor | step2.brand.default.failed reason=no-trigger
+2026-04-14 22:32:42 | INFO | core.extractor | step2.fill.brand product=هایلایتر selected=
+2026-04-14 22:32:43 | INFO | core.extractor | step2.model.filled
+2026-04-14 22:32:43 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:32:45 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:32:53 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-14 22:32:55 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:33:02 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-14 22:33:03 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:33:11 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-14 22:33:12 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:33:20 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-14 22:33:20 | INFO | core.extractor | step2.number.filled index=1
+2026-04-14 22:33:21 | INFO | core.extractor | step2.number.filled index=2
+2026-04-14 22:33:21 | INFO | core.extractor | step2.number.filled index=3
+2026-04-14 22:33:21 | INFO | core.extractor | step2.number.filled index=4
+2026-04-14 22:33:21 | INFO | core.extractor | step2.continue.clicked
+2026-04-14 22:33:23 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039091
+2026-04-14 22:33:23 | INFO | core.extractor | step2.fill.done product=هایلایتر
+2026-04-14 22:33:23 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039091
+2026-04-14 22:33:24 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039091
+2026-04-14 22:33:24 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=5
+2026-04-14 22:33:24 | INFO | core.extractor | step3.field.detected field=مشخصات محصول type=single-select
+2026-04-14 22:33:26 | INFO | core.extractor | trigger.valid field=مشخصات محصول candidate=انتخاب کنید
+2026-04-14 22:33:34 | INFO | core.extractor | step3.field.attempt field=مشخصات محصول type=single-select attempt=1 popper_detected=True option_count=23 valid=True
+2026-04-14 22:33:35 | INFO | core.extractor | step3.field.detected field=سازگار با نوع پوست type=single-select
+2026-04-14 22:33:36 | INFO | core.extractor | trigger.valid field=سازگار با نوع پوست candidate=انتخاب کنید
+2026-04-14 22:33:44 | INFO | core.extractor | step3.field.attempt field=سازگار با نوع پوست type=single-select attempt=1 popper_detected=True option_count=9 valid=True
+2026-04-14 22:33:45 | INFO | core.extractor | step3.field.detected field=جلوه رنگ type=multi-select
+2026-04-14 22:33:46 | INFO | core.extractor | trigger.valid field=جلوه رنگ candidate=انتخاب کنید
+2026-04-14 22:33:54 | INFO | core.extractor | step3.field.attempt field=جلوه رنگ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-14 22:33:54 | INFO | core.extractor | step3.field.detected field=نوع هایلایتر type=multi-select
+2026-04-14 22:33:56 | INFO | core.extractor | trigger.valid field=نوع هایلایتر candidate=انتخاب کنید
+2026-04-14 22:34:04 | INFO | core.extractor | step3.field.attempt field=نوع هایلایتر type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:34:04 | INFO | core.extractor | step3.field.detected field=تناژ رنگ type=multi-select
+2026-04-14 22:34:05 | INFO | core.extractor | trigger.valid field=تناژ رنگ candidate=انتخاب کنید
+2026-04-14 22:34:13 | INFO | core.extractor | step3.field.attempt field=تناژ رنگ type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
+2026-04-14 22:34:13 | INFO | core.extractor | extract.done product=هایلایتر step2_fields=4 step3_fields=5
+2026-04-14 22:40:55 | INFO | core.logging_config | ============================================================
+2026-04-14 22:40:55 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:40:55 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:40:55 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:40:55 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:40:55 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:40:55 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:40:57 | INFO | core.logging_config | ============================================================
+2026-04-14 22:40:57 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 22:40:57 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 22:40:57 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 22:40:57 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 22:40:57 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 22:40:57 | INFO | core.logging_config | Frozen: False
+2026-04-14 22:40:57 | INFO | ui.main_window | Application started
+2026-04-14 22:40:58 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:41:35 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 22:41:35 | INFO | core.worker | Launching browser runtime
+2026-04-14 22:41:35 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 22:41:35 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 22:41:35 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 22:41:37 | INFO | core.session | navigating to Digikala
+2026-04-14 22:41:40 | INFO | core.session | login confirmed
+2026-04-14 22:41:40 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 22:41:40 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:41:40 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 22:41:41 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 22:41:42 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:41:43 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:41:43 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:41:44 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:41:52 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:41:53 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:41:54 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:42:02 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:42:02 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:42:04 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:42:11 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:42:12 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:42:13 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:42:21 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:42:21 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 22:42:21 | INFO | core.extractor | step2.brand.default.required
+2026-04-14 22:42:52 | INFO | core.extractor | trigger.invalid field=برند یا نام سازنده کالا
+2026-04-14 22:42:52 | WARNING | core.extractor | step2.brand.default.failed reason=no-trigger
+2026-04-14 22:42:52 | INFO | core.extractor | step2.fill.brand product=کانتور selected=
+2026-04-14 22:42:53 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 478). Other element would receive the click: <p class="text-subtitle-strong color-n-700">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 34, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 40, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 268, in _fill_model_input
+    self._scroll_into_view(model_input); model_input.click(); model_input.clear(); model_input.send_keys("12"); logger.info("step2.model.filled")
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 114, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 508, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 478). Other element would receive the click: <p class="text-subtitle-strong color-n-700">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 22:42:53 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:42:54 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-14 22:42:55 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 22:42:55 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 22:42:56 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 22:42:56 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 22:42:58 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 22:43:06 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 22:43:06 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 22:43:08 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 22:43:15 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:43:16 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 22:43:17 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 22:43:25 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:43:26 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 22:43:27 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 22:43:34 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 22:43:35 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-14 22:43:35 | INFO | core.extractor | step2.brand.default.required
+2026-04-14 22:44:06 | INFO | core.extractor | trigger.invalid field=برند یا نام سازنده کالا
+2026-04-14 22:44:06 | WARNING | core.extractor | step2.brand.default.failed reason=no-trigger
+2026-04-14 22:44:06 | INFO | core.extractor | step2.fill.brand product=هایلایتر selected=
+2026-04-14 22:44:07 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 478). Other element would receive the click: <p class="text-subtitle-strong color-n-700">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 34, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 40, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+    ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 268, in _fill_model_input
+    self._scroll_into_view(model_input); model_input.click(); model_input.clear(); model_input.send_keys("12"); logger.info("step2.model.filled")
+                                         ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 114, in click
+    self._execute(Command.CLICK_ELEMENT)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 508, in _execute
+    return self._parent.execute(command, params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.ElementClickInterceptedException: Message: element click intercepted: Element <input class="px-2 TextField__input-xuVYYy text-subtitle w-100 TextField-cJQfI5 TextField--primary-cAI5H3" type="text" name="model" aria-label="model" value=""> is not clickable at point (781, 478). Other element would receive the click: <p class="text-subtitle-strong color-n-700">...</p>
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#elementclickinterceptedexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff6489df0e5]
+	chromedriver!(No symbol) [0x7ff6489dc7fa]
+	chromedriver!(No symbol) [0x7ff6489d9685]
+	chromedriver!(No symbol) [0x7ff6489d8537]
+	chromedriver!(No symbol) [0x7ff6489cb186]
+	chromedriver!(No symbol) [0x7ff6489fff8a]
+	chromedriver!(No symbol) [0x7ff6489caa06]
+	chromedriver!(No symbol) [0x7ff648a23b9b]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+

@@ -19,6 +19,7 @@ STEP3_EXPAND_TEXT="\u067e\u0631 \u06a9\u0631\u062f\u0646 \u0627\u0637\u0644\u062
 CONTINUE_TEXT="\u0627\u062f\u0627\u0645\u0647"
 COMMISSION_TEXT="\u06a9\u0645\u06cc\u0633\u06cc\u0648\u0646"
 SEARCH_PRIMER="\u0627"
+DEFAULT_BRAND_TEXT="\u0645\u062a\u0641\u0631\u0642\u0647"
 STEP2_SKIP_FIELD_TOKENS=("\u0628\u0631\u0646\u062f","\u0646\u0627\u0645 \u0633\u0627\u0632\u0646\u062f\u0647 \u06a9\u0627\u0644\u0627")
 GENERAL_INFO_CONTAINER_XPATH="//div[contains(@class,'FormComponentFrame__input-container')][.//span[normalize-space()='"+PLACEHOLDER_TEXT+"'] or .//input[@name='brand_id']]"
 SPEC_FIELD_XPATH="//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
@@ -194,20 +195,67 @@ class Extractor:
     def _select_brand(self)->str|None:
         brand_inputs=self._find_elements(By.NAME,"brand_id")
         if not brand_inputs: logger.info("step2.brand.skip reason=missing"); return None
-        logger.info("step2.required.exempt field=%s","\u0628\u0631\u0646\u062f")
-        return None
         brand_input=brand_inputs[0]; current_value=(brand_input.get_attribute("value") or "").strip()
-        if current_value: logger.info("step2.brand.skip reason=already-selected"); return current_value
+        if current_value:
+            logger.info("step2.brand.default.already_set value=%s",current_value)
+            return current_value
+        logger.info("step2.brand.default.required")
         trigger=self._find_dropdown_trigger(self._find_parent_label_or_self(brand_input))
-        if trigger is None: logger.warning("step2.brand.skip reason=no-trigger"); return None
+        if trigger is None:
+            logger.warning("step2.brand.default.failed reason=no-trigger")
+            return None
         popper=self._open_dropdown(trigger)
-        cards=self.wait.until(lambda _:popper.find_elements(By.XPATH,".//div[contains(@class,'pointer') and .//p[contains(@class,'text-subtitle-strong')]]"))
-        for card in cards:
-            try:
-                name=self._safe_text(card.find_element(By.CSS_SELECTOR,"p.text-subtitle-strong")); self._scroll_into_view(card); self._js_click(card); time.sleep(0.8)
-                if self._brand_selection_confirmed(): return name
-            except Exception: logger.exception("step2.brand.probe_failed")
+        logger.info("step2.brand.default.start")
+        try:
+            self._prime_searchable_dropdown(popper)
+            search_inputs=[e for e in popper.find_elements(By.XPATH,".//input[not(@type='hidden')]") if self._is_visible(e)]
+            if search_inputs:
+                search_input=search_inputs[0]
+                search_input.click()
+                search_input.clear()
+                search_input.send_keys(DEFAULT_BRAND_TEXT)
+                time.sleep(0.5)
+
+            option=self.wait.until(lambda _ : self._find_brand_option(popper,DEFAULT_BRAND_TEXT))
+            self._scroll_into_view(option)
+            self._js_click(option)
+            time.sleep(0.8)
+            selected_value=self._read_brand_value(brand_input) or DEFAULT_BRAND_TEXT
+            if self._brand_selection_confirmed() or selected_value:
+                logger.info("step2.brand.default.selected value=%s",selected_value)
+                return selected_value
+        except Exception:
+            logger.exception("step2.brand.default.failed")
+        finally:
+            self._close_dropdown(trigger)
         return None
+    def _find_brand_option(self,popper:WebElement,target_text:str)->WebElement|None:
+        normalized_target=self._normalize_label(target_text)
+        xpaths=[
+            ".//div[contains(@class,'pointer') and .//p[contains(@class,'text-subtitle-strong')]]",
+            ".//*[self::div or self::li][contains(@class,'pointer') or @role='option']",
+            ".//p[contains(@class,'pointer') or normalize-space()]",
+        ]
+        for xpath in xpaths:
+            for option in popper.find_elements(By.XPATH,xpath):
+                candidate_text=self._normalize_label(self._safe_text(option))
+                if candidate_text==normalized_target:
+                    return option
+                try:
+                    nested=self._normalize_label(self._safe_text(option.find_element(By.XPATH,".//p")))
+                    if nested==normalized_target:
+                        return option
+                except Exception:
+                    pass
+        return None
+    def _read_brand_value(self,brand_input:WebElement)->str:
+        value=(brand_input.get_attribute("value") or "").strip()
+        if value:
+            return value
+        container=self._find_parent_label_or_self(brand_input)
+        values=[self._safe_text(node) for node in container.find_elements(By.XPATH,".//p[normalize-space()]")]
+        values=[v for v in values if v not in {"",self._find_label_text(container),PLACEHOLDER_TEXT}]
+        return values[0] if values else ""
     def _brand_selection_confirmed(self)->bool:
         for by,value in [(By.CSS_SELECTOR,"div.overflow-hidden[style*='max-height: 26px']"),(By.XPATH,f"//*[contains(text(),'{COMMISSION_TEXT}')]")]:
             if any(e.is_displayed() for e in self._find_elements(by,value)): return True
