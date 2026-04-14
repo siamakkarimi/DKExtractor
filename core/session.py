@@ -7,13 +7,14 @@ from typing import Callable
 from selenium.common.exceptions import WebDriverException
 from selenium.webdriver.common.by import By
 
+BASE_URL = "https://seller.digikala.com"
 LOGIN_URL = "https://seller.digikala.com/pwa/account/sign-in"
 PANEL_URL = "https://seller.digikala.com/pwa/"
 
 logger = logging.getLogger(__name__)
 
-SIGN_IN_URL_PARTS = ("/account/sign-in", "/sign-in")
-AUTHENTICATED_SIGNAL_SELECTORS = [
+SIGN_IN_URL_PARTS = ("/pwa/account/sign-in", "/account/sign-in", "/sign-in")
+DASHBOARD_SIGNAL_SELECTORS = [
     (By.XPATH, "//a[contains(@href,'/pwa/product/create')]"),
     (By.XPATH, "//a[contains(@href,'/pwa/products')]"),
     (By.XPATH, "//a[contains(@href,'/pwa/orders')]"),
@@ -36,7 +37,7 @@ class SessionManager:
         self.driver = driver
 
     def _current_url(self) -> str:
-        return (self.driver.current_url or "").lower()
+        return (self.driver.current_url or "").strip().lower()
 
     def _find_any(self, selectors: list[tuple[str, str]]) -> bool:
         try:
@@ -48,8 +49,15 @@ class SessionManager:
                     except Exception:
                         continue
         except WebDriverException:
-            logger.debug("Could not inspect DOM while checking authentication state", exc_info=True)
+            logger.debug("Could not inspect DOM while checking session state", exc_info=True)
         return False
+
+    def _is_blank_page(self) -> bool:
+        try:
+            current_url = self._current_url()
+        except WebDriverException:
+            return True
+        return current_url in {"", "about:blank", "data:,"}
 
     def _is_sign_in_page(self) -> bool:
         try:
@@ -64,13 +72,15 @@ class SessionManager:
     def is_logged_in(self) -> bool:
         try:
             current_url = self._current_url()
-            if self._is_sign_in_page():
+            if current_url in {"", "about:blank", "data:,"}:
                 return False
-
-            if any(part in current_url for part in ("/pwa/product/", "/pwa/orders", "/pwa/account/profile")):
+            if any(part in current_url for part in SIGN_IN_URL_PARTS):
+                return False
+            if self._find_any(DASHBOARD_SIGNAL_SELECTORS):
                 return True
-
-            return self._find_any(AUTHENTICATED_SIGNAL_SELECTORS)
+            if self._find_any(LOGIN_SIGNAL_SELECTORS):
+                return False
+            return current_url.startswith(BASE_URL)
         except WebDriverException:
             logger.debug("Could not read current URL while checking login state", exc_info=True)
             return False
@@ -82,20 +92,30 @@ class SessionManager:
         except WebDriverException:
             return False
 
+    def _navigate_to_digikala(self) -> None:
+        logger.info("navigating to Digikala")
+        self.driver.get(BASE_URL)
+        time.sleep(2)
+
     def ensure_login(
         self,
         timeout_seconds: int = 300,
         poll_seconds: int = 2,
         stop_requested: Callable[[], bool] | None = None,
     ) -> bool:
-        self.driver.get(PANEL_URL)
-        time.sleep(2)
+        self._navigate_to_digikala()
+
+        if self._is_blank_page():
+            logger.warning("Detected blank page after initial navigation; retrying Digikala")
+            self._navigate_to_digikala()
 
         if self.is_logged_in():
+            logger.info("login confirmed")
             logger.info("Session restored from persistent Chrome profile")
             return True
 
-        logger.info("Authentication required. Waiting for user sign-in in browser")
+        logger.info("login required")
+        logger.info("waiting for user login")
         self.driver.get(LOGIN_URL)
 
         deadline = time.time() + timeout_seconds
@@ -109,8 +129,16 @@ class SessionManager:
                 logger.info("Browser was closed before login completed")
                 return False
 
+            if self._is_blank_page():
+                logger.warning("Detected blank page during login flow; forcing Digikala navigation")
+                self._navigate_to_digikala()
+                if not self.is_logged_in() and not self._is_sign_in_page():
+                    logger.info("login required")
+                    logger.info("waiting for user login")
+                    self.driver.get(LOGIN_URL)
+
             if self.is_logged_in():
-                logger.info("User login completed successfully")
+                logger.info("login confirmed")
                 return True
 
             time.sleep(poll_seconds)
