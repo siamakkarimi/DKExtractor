@@ -21,6 +21,7 @@ COMMISSION_TEXT="\u06a9\u0645\u06cc\u0633\u06cc\u0648\u0646"
 SEARCH_PRIMER="\u0627"
 DEFAULT_BRAND_TEXT="\u0645\u062a\u0641\u0631\u0642\u0647"
 STEP2_SKIP_FIELD_TOKENS=("\u0628\u0631\u0646\u062f","\u0646\u0627\u0645 \u0633\u0627\u0632\u0646\u062f\u0647 \u06a9\u0627\u0644\u0627")
+BRAND_WAIT_SECONDS=12
 GENERAL_INFO_CONTAINER_XPATH="//div[contains(@class,'FormComponentFrame__input-container')][.//span[normalize-space()='"+PLACEHOLDER_TEXT+"'] or .//input[@name='brand_id']]"
 SPEC_FIELD_XPATH="//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
 POPPER_XPATH="//div[(@data-popper-placement or @role='list' or contains(@class,'DropDown__popper__') or contains(@class,'DropDownMultiple__popper__')) and not(contains(@style,'display: none'))]"
@@ -28,8 +29,9 @@ STEP3_EXPAND_BUTTON_XPATH=f"//button[contains(normalize-space(),'{STEP3_EXPAND_T
 
 class Extractor:
     def __init__(self,driver):
-        self.driver=driver; self.wait=WebDriverWait(driver,30); self.short_wait=WebDriverWait(driver,5)
+        self.driver=driver; self.wait=WebDriverWait(driver,30); self.short_wait=WebDriverWait(driver,5); self._brand_handled=False
     def extract_product(self,product_name:str)->tuple[list[dict[str,list[str]]],list[dict[str,list[str]]]]:
+        self._brand_handled=False
         logger.info("extract.start product=%s url=%s page_state=%s",product_name,self.driver.current_url,self._page_state())
         self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
         logger.info("extract.done product=%s step2_fields=%s step3_fields=%s",product_name,len(step2),len(step3)); return step2,step3
@@ -197,57 +199,30 @@ class Extractor:
         if not brand_inputs: logger.info("step2.brand.skip reason=missing"); return None
         brand_input=brand_inputs[0]; current_value=(brand_input.get_attribute("value") or "").strip()
         if current_value:
-            logger.info("step2.brand.default.already_set value=%s",current_value)
+            self._brand_handled=True
+            logger.info("step2.brand.already_set value=%s",current_value)
             return current_value
-        logger.info("step2.brand.default.required")
-        trigger=self._find_dropdown_trigger(self._find_parent_label_or_self(brand_input))
+        if self._brand_handled:
+            logger.warning("step2.brand.reopen.blocked")
+            raise RuntimeError("Brand field is still empty after the previous selection attempt.")
+        logger.info("step2.brand.required")
+        trigger=self._resolve_brand_trigger(brand_input)
         if trigger is None:
-            logger.warning("step2.brand.default.failed reason=no-trigger")
-            return None
+            logger.warning("step2.brand.timeout reason=no-trigger")
+            raise RuntimeError("Brand field is required but no clickable brand trigger was found.")
+        self._brand_handled=True
+        logger.info("step2.brand.opened.once")
         popper=self._open_dropdown(trigger)
-        logger.info("step2.brand.default.start")
+        logger.info("step2.brand.waiting_for_user")
         try:
-            self._prime_searchable_dropdown(popper)
-            search_inputs=[e for e in popper.find_elements(By.XPATH,".//input[not(@type='hidden')]") if self._is_visible(e)]
-            if search_inputs:
-                search_input=search_inputs[0]
-                search_input.click()
-                search_input.clear()
-                search_input.send_keys(DEFAULT_BRAND_TEXT)
-                time.sleep(0.5)
-
-            option=self.wait.until(lambda _ : self._find_brand_option(popper,DEFAULT_BRAND_TEXT))
-            self._scroll_into_view(option)
-            self._js_click(option)
-            time.sleep(0.8)
-            selected_value=self._read_brand_value(brand_input) or DEFAULT_BRAND_TEXT
-            if self._brand_selection_confirmed() or selected_value:
-                logger.info("step2.brand.default.selected value=%s",selected_value)
-                return selected_value
+            selected_value=self.wait.until(lambda _ : self._wait_for_brand_selection(brand_input))
+            logger.info("step2.brand.selected value=%s",selected_value)
+            return selected_value
         except Exception:
-            logger.exception("step2.brand.default.failed")
+            logger.warning("step2.brand.timeout")
+            raise RuntimeError("Brand selection timed out before the field received a value.")
         finally:
             self._close_dropdown(trigger)
-        return None
-    def _find_brand_option(self,popper:WebElement,target_text:str)->WebElement|None:
-        normalized_target=self._normalize_label(target_text)
-        xpaths=[
-            ".//div[contains(@class,'pointer') and .//p[contains(@class,'text-subtitle-strong')]]",
-            ".//*[self::div or self::li][contains(@class,'pointer') or @role='option']",
-            ".//p[contains(@class,'pointer') or normalize-space()]",
-        ]
-        for xpath in xpaths:
-            for option in popper.find_elements(By.XPATH,xpath):
-                candidate_text=self._normalize_label(self._safe_text(option))
-                if candidate_text==normalized_target:
-                    return option
-                try:
-                    nested=self._normalize_label(self._safe_text(option.find_element(By.XPATH,".//p")))
-                    if nested==normalized_target:
-                        return option
-                except Exception:
-                    pass
-        return None
     def _read_brand_value(self,brand_input:WebElement)->str:
         value=(brand_input.get_attribute("value") or "").strip()
         if value:
@@ -256,6 +231,24 @@ class Extractor:
         values=[self._safe_text(node) for node in container.find_elements(By.XPATH,".//p[normalize-space()]")]
         values=[v for v in values if v not in {"",self._find_label_text(container),PLACEHOLDER_TEXT}]
         return values[0] if values else ""
+    def _resolve_brand_trigger(self,brand_input:WebElement)->WebElement|None:
+        container=self._find_parent_label_or_self(brand_input)
+        candidates=[brand_input]
+        candidates.extend(container.find_elements(By.XPATH,f".//*[self::span or self::p][normalize-space()='{PLACEHOLDER_TEXT}']"))
+        candidates.extend(container.find_elements(By.XPATH,".//*[@role='button' or @role='combobox' or @aria-haspopup='listbox']"))
+        if container not in candidates: candidates.append(container)
+        for candidate in candidates:
+            if self._is_visible(candidate) and not self._is_disabled(candidate):
+                return candidate
+        return None
+    def _wait_for_brand_selection(self,brand_input:WebElement)->str|bool:
+        deadline=time.time()+BRAND_WAIT_SECONDS
+        while time.time()<deadline:
+            value=self._read_brand_value(brand_input)
+            if value:
+                return value
+            time.sleep(0.3)
+        return False
     def _brand_selection_confirmed(self)->bool:
         for by,value in [(By.CSS_SELECTOR,"div.overflow-hidden[style*='max-height: 26px']"),(By.XPATH,f"//*[contains(text(),'{COMMISSION_TEXT}')]")]:
             if any(e.is_displayed() for e in self._find_elements(by,value)): return True
