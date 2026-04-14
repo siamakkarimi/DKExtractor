@@ -19,6 +19,7 @@ STEP3_EXPAND_TEXT="\u067e\u0631 \u06a9\u0631\u062f\u0646 \u0627\u0637\u0644\u062
 CONTINUE_TEXT="\u0627\u062f\u0627\u0645\u0647"
 COMMISSION_TEXT="\u06a9\u0645\u06cc\u0633\u06cc\u0648\u0646"
 SEARCH_PRIMER="\u0627"
+STEP2_SKIP_FIELD_TOKENS=("\u0628\u0631\u0646\u062f","\u0646\u0627\u0645 \u0633\u0627\u0632\u0646\u062f\u0647 \u06a9\u0627\u0644\u0627")
 GENERAL_INFO_CONTAINER_XPATH="//div[contains(@class,'FormComponentFrame__input-container')][.//span[normalize-space()='"+PLACEHOLDER_TEXT+"'] or .//input[@name='brand_id']]"
 SPEC_FIELD_XPATH="//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
 POPPER_XPATH="//div[(@data-popper-placement or @role='list' or contains(@class,'DropDown__popper__') or contains(@class,'DropDownMultiple__popper__')) and not(contains(@style,'display: none'))]"
@@ -88,6 +89,9 @@ class Extractor:
             if self._candidate_trigger_from_container(container) is None: continue
             label=self._find_label_text(container)
             if not label: continue
+            if self._should_skip_step2_field(label):
+                logger.info("step2.skip field=%s",label)
+                continue
             counters[label]+=1; fields.append({"label":label,"occurrence":counters[label]})
         return fields
     def _list_step3_fields(self)->list[dict[str,object]]:
@@ -187,6 +191,8 @@ class Extractor:
     def _select_brand(self)->str|None:
         brand_inputs=self._find_elements(By.NAME,"brand_id")
         if not brand_inputs: logger.info("step2.brand.skip reason=missing"); return None
+        logger.info("step2.skip field=%s","\u0628\u0631\u0646\u062f")
+        return None
         brand_input=brand_inputs[0]; current_value=(brand_input.get_attribute("value") or "").strip()
         if current_value: logger.info("step2.brand.skip reason=already-selected"); return current_value
         trigger=self._find_dropdown_trigger(self._find_parent_label_or_self(brand_input))
@@ -214,6 +220,9 @@ class Extractor:
             field_name=str(ref["label"]); occurrence=int(ref["occurrence"]); container=self._locate_field_container("step2",field_name,occurrence)
             if container is None or self._is_disabled(container): 
                 if container is not None: logger.info("step2.fill.skip field=%s reason=disabled",field_name)
+                continue
+            if self._should_skip_step2_field(field_name):
+                logger.info("step2.skip field=%s",field_name)
                 continue
             if self._is_already_populated(container): logger.info("step2.fill.skip field=%s reason=already-populated",field_name); continue
             trigger=self._find_dropdown_trigger(container)
@@ -259,6 +268,11 @@ class Extractor:
                 text=self._safe_text(candidate)
                 if text and text!=PLACEHOLDER_TEXT: return text
         return "Unknown field"
+    def _normalize_label(self,label:str)->str:
+        return " ".join((label or "").replace("\u200c"," ").split())
+    def _should_skip_step2_field(self,label:str)->bool:
+        normalized=self._normalize_label(label)
+        return any(token in normalized for token in STEP2_SKIP_FIELD_TOKENS)
     def _is_already_populated(self,container:WebElement)->bool:
         if container.find_elements(By.XPATH,f".//span[normalize-space()='{PLACEHOLDER_TEXT}']"): return False
         chips=container.find_elements(By.XPATH,".//*[contains(@class,'chip') or contains(@class,'tag')]")

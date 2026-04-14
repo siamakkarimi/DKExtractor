@@ -972,3 +972,174 @@ RuntimeError: Login timed out. Please try Login Only and complete sign-in.
 2026-04-14 21:29:40 | INFO | core.extractor | trigger.valid field=تناژ رنگ candidate=انتخاب کنید
 2026-04-14 21:29:47 | INFO | core.extractor | step3.field.attempt field=تناژ رنگ type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
 2026-04-14 21:29:48 | INFO | core.extractor | extract.done product=هایلایتر step2_fields=5 step3_fields=5
+2026-04-14 21:54:53 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 21:54:53 | INFO | core.worker | Launching browser runtime
+2026-04-14 21:54:53 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 21:54:53 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 21:54:53 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 21:54:54 | INFO | core.session | navigating to Digikala
+2026-04-14 21:54:57 | INFO | core.session | login confirmed
+2026-04-14 21:54:57 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 21:54:57 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 21:54:58 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 21:54:59 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 21:55:00 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=5
+2026-04-14 21:55:00 | INFO | core.extractor | step2.field.detected field=برند یا نام سازنده کالا type=searchable
+2026-04-14 21:55:26 | INFO | core.extractor | trigger.invalid field=برند یا نام سازنده کالا
+2026-04-14 21:55:26 | INFO | core.extractor | step2.field.skip field=برند یا نام سازنده کالا type=searchable attempt=1 reason=no-valid-trigger
+2026-04-14 21:55:26 | WARNING | core.extractor | step2.field.final_empty field=برند یا نام سازنده کالا type=searchable option_count=0
+2026-04-14 21:55:27 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 21:55:29 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 21:55:39 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 21:55:40 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 21:55:42 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 21:55:52 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 21:55:52 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 21:55:55 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 21:56:04 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 21:56:05 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 21:56:07 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 21:56:16 | ERROR | core.extractor | step2.field.error field=شناسه عمومی type=single-select attempt=1 popper_detected=True
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 65, in _extract_fields
+    if field_type=="searchable": self._prime_searchable_dropdown(popper)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 164, in _collect_open_dropdown_options
+    def _collect_open_dropdown_options(self,popper:WebElement)->list[str]:
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: 'NoneType' object is not iterable
+2026-04-14 21:56:16 | ERROR | core.extractor | step2.field.error field=شناسه عمومی type=single-select attempt=2 popper_detected=False
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 59, in _extract_fields
+    refreshed=self._locate_field_container(stage,field_name,occurrence)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Container disappeared before attempt
+2026-04-14 21:56:16 | ERROR | core.extractor | step2.field.error field=شناسه عمومی type=single-select attempt=3 popper_detected=False
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 59, in _extract_fields
+    refreshed=self._locate_field_container(stage,field_name,occurrence)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Container disappeared before attempt
+2026-04-14 21:56:16 | WARNING | core.extractor | step2.field.final_empty field=شناسه عمومی type=single-select option_count=0
+2026-04-14 21:56:16 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 21:56:16 | INFO | core.extractor | step2.brand.skip reason=missing
+2026-04-14 21:56:16 | INFO | core.extractor | step2.fill.brand product=کانتور selected=
+2026-04-14 21:56:16 | INFO | core.extractor | step2.model.skip reason=missing
+2026-04-14 21:56:16 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.180)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff648954322]
+	chromedriver!(No symbol) [0x7ff648a06e86]
+	chromedriver!(No symbol) [0x7ff648a23482]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 32, in extract_product
+    logger.info("extract.start product=%s url=%s page_state=%s",product_name,self.driver.current_url,self._page_state())
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 38, in complete_step2_required_fields
+    logger.info("step2.fill.start product=%s",product_name); selected=self._select_brand(); logger.info("step2.fill.brand product=%s selected=%s",product_name,selected or "")
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 234, in _advance_to_step3
+    except Exception: logger.exception("step2.fill.error field=%s",field_name)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 514, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 816, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.180)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff648954322]
+	chromedriver!(No symbol) [0x7ff648a06e86]
+	chromedriver!(No symbol) [0x7ff648a23482]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 21:56:17 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 21:56:17 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.180)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff648954322]
+	chromedriver!(No symbol) [0x7ff648a06e86]
+	chromedriver!(No symbol) [0x7ff648a23482]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-14 21:56:19 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.180)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff648ef29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff648c1a0d0+14e90]
+	chromedriver!(No symbol) [0x7ff64897db2d]
+	chromedriver!(No symbol) [0x7ff648954322]
+	chromedriver!(No symbol) [0x7ff648a06e86]
+	chromedriver!(No symbol) [0x7ff648a23482]
+	chromedriver!(No symbol) [0x7ff6489c9298]
+	chromedriver!(No symbol) [0x7ff6489ca183]
+	chromedriver!GetHandleVerifier [0x7ff648f1de0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff648f18588+313348]
+	chromedriver!GetHandleVerifier [0x7ff648f39d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff648c36785+31545]
+	chromedriver!GetHandleVerifier [0x7ff648c3facc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff648c23634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff648c237e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff648c07e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
