@@ -22,6 +22,8 @@ Thumbs.db
 .vscode/
 .idea/
 
+logs/
+
 Note/
 
 runtime/
