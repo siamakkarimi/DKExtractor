@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import logging
-import time
 from pathlib import Path
 
 from selenium import webdriver
@@ -19,10 +18,22 @@ class DriverStartupError(RuntimeError):
 
 
 def _build_profile_dir() -> Path:
-    base_profile_root = chrome_user_data_dir().parent / "chrome-user-data-runs"
-    run_profile = base_profile_root / f"run-{int(time.time() * 1000)}"
-    run_profile.mkdir(parents=True, exist_ok=True)
-    return run_profile
+    profile_dir = chrome_user_data_dir() / "app-profile"
+    profile_dir.mkdir(parents=True, exist_ok=True)
+    return profile_dir
+
+
+def _profile_lock_paths(profile_dir: Path) -> list[Path]:
+    return [
+        profile_dir / "SingletonLock",
+        profile_dir / "SingletonCookie",
+        profile_dir / "SingletonSocket",
+        profile_dir / "lockfile",
+    ]
+
+
+def _profile_lock_detected(profile_dir: Path) -> bool:
+    return any(lock_path.exists() for lock_path in _profile_lock_paths(profile_dir))
 
 
 def _build_options(profile_dir: Path) -> Options:
@@ -37,6 +48,7 @@ def _build_options(profile_dir: Path) -> Options:
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
     options.add_argument(f"--user-data-dir={profile_dir}")
+    options.add_argument("--profile-directory=Default")
     return options
 
 
@@ -54,12 +66,25 @@ def _launch_chrome(profile_dir: Path) -> webdriver.Chrome:
         raise
 
 
+def _is_profile_lock_error(exc: Exception) -> bool:
+    message = str(exc).lower()
+    fragments = [
+        "user data directory is already in use",
+        "probably user data directory is already in use",
+        "profile appears to be in use",
+        "chrome failed to start",
+        "devtoolsactiveport",
+        "session not created",
+    ]
+    return any(fragment in message for fragment in fragments)
+
+
 def create_driver() -> webdriver.Chrome:
     ensure_app_dirs()
 
     chrome_binary = chrome_binary_path()
     driver_binary = chromedriver_path()
-    run_profile = _build_profile_dir()
+    profile_dir = _build_profile_dir()
 
     if not chrome_binary.exists():
         logger.error("Bundled Chrome binary not found at: %s", chrome_binary)
@@ -71,13 +96,26 @@ def create_driver() -> webdriver.Chrome:
 
     logger.info("Chrome binary path: %s", chrome_binary)
     logger.info("ChromeDriver path: %s", driver_binary)
-    logger.info("Chrome profile path: %s", run_profile)
+    logger.info("Chrome profile path: %s", profile_dir)
+
+    if _profile_lock_detected(profile_dir):
+        logger.warning("Chrome profile lock files detected at: %s", profile_dir)
 
     try:
-        return _launch_chrome(run_profile)
+        return _launch_chrome(profile_dir)
     except WebDriverException as exc:
+        if _is_profile_lock_error(exc):
+            logger.exception("Chrome startup failed because the app profile is in use")
+            raise DriverStartupError(
+                "The DKExtractor browser profile is already in use. Close other DKExtractor browser windows and try again."
+            ) from exc
         logger.exception("Primary Chrome startup failed")
         raise DriverStartupError("Browser could not start. Close other DKExtractor/Chrome windows and try again.") from exc
     except Exception as exc:
+        if _is_profile_lock_error(exc):
+            logger.exception("Chrome startup failed because the app profile is in use")
+            raise DriverStartupError(
+                "The DKExtractor browser profile is already in use. Close other DKExtractor browser windows and try again."
+            ) from exc
         logger.exception("Unexpected browser startup failure")
         raise DriverStartupError("Browser startup failed unexpectedly. Please check logs and try again.") from exc

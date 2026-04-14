@@ -21,21 +21,26 @@ logger = logging.getLogger(__name__)
 STEP2_HEADERS = ["timestamp", "product_name", "field", "items_json"]
 STEP3_HEADERS = ["timestamp", "product_name", "field", "items_json"]
 
+PLACEHOLDER_TEXT = "انتخاب کنید"
+SEARCH_TEXT_FRAGMENT = "جست"
+STEP3_EXPAND_TEXT = "پر کردن اطلاعات بیشتر"
+
 GENERAL_INFO_CONTAINER_XPATH = (
     "//div[contains(@class,'FormComponentFrame__input-container')]"
-    "[.//span[normalize-space()='انتخاب کنید'] or .//input[@name='brand_id']]"
+    f"[.//span[normalize-space()='{PLACEHOLDER_TEXT}'] or .//input[@name='brand_id']]"
 )
 SPEC_FIELD_XPATH = (
-    "//label[contains(@class,'DropDown__container') or "
-    "contains(@class,'DropDownMultiple__container')]"
+    "//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
 )
 POPPER_XPATH = (
     "//div[("
-    "@data-popper-placement or "
-    "@role='list' or "
-    "contains(@class,'DropDown__popper__') or "
-    "contains(@class,'DropDownMultiple__popper__')"
+    "@data-popper-placement or @role='list' or "
+    "contains(@class,'DropDown__popper__') or contains(@class,'DropDownMultiple__popper__')"
     ") and not(contains(@style,'display: none'))]"
+)
+STEP3_EXPAND_BUTTON_XPATH = (
+    f"//button[contains(normalize-space(),'{STEP3_EXPAND_TEXT}')]"
+    f" | //div[contains(normalize-space(),'{STEP3_EXPAND_TEXT}')]"
 )
 
 
@@ -46,31 +51,17 @@ class Extractor:
         self.short_wait = WebDriverWait(driver, 5)
 
     def extract_product(self, product_name: str) -> tuple[list[dict[str, list[str]]], list[dict[str, list[str]]]]:
-        logger.info(
-            "extract.start product=%s url=%s page_state=%s",
-            product_name,
-            self.driver.current_url,
-            self._page_state(),
-        )
+        logger.info("extract.start product=%s url=%s page_state=%s", product_name, self.driver.current_url, self._page_state())
         self._wait_for_step2_ready()
         step2_results = self.extract_step2()
         self.complete_step2_required_fields(product_name)
         step3_results = self.extract_step3()
-        logger.info(
-            "extract.done product=%s step2_fields=%s step3_fields=%s",
-            product_name,
-            len(step2_results),
-            len(step3_results),
-        )
+        logger.info("extract.done product=%s step2_fields=%s step3_fields=%s", product_name, len(step2_results), len(step3_results))
         return step2_results, step3_results
 
     def extract_step2(self) -> list[dict[str, list[str]]]:
         field_refs = self._list_step2_fields()
-        logger.info(
-            "step2.scan.start page_state=%s field_count=%s",
-            self._page_state(),
-            len(field_refs),
-        )
+        logger.info("step2.scan.start page_state=%s field_count=%s", self._page_state(), len(field_refs))
         return self._extract_fields(field_refs, stage="step2")
 
     def complete_step2_required_fields(self, product_name: str) -> None:
@@ -84,12 +75,10 @@ class Extractor:
         logger.info("step2.fill.done product=%s", product_name)
 
     def extract_step3(self) -> list[dict[str, list[str]]]:
+        self._ensure_step3_panel_open()
+        self._wait_for_step3_ready()
         field_refs = self._list_step3_fields()
-        logger.info(
-            "step3.scan.start page_state=%s field_count=%s",
-            self._page_state(),
-            len(field_refs),
-        )
+        logger.info("step3.scan.start page_state=%s field_count=%s", self._page_state(), len(field_refs))
         return self._extract_fields(field_refs, stage="step3")
 
     def save(self, name: str, step2: list[dict[str, list[str]]], step3: list[dict[str, list[str]]]) -> None:
@@ -99,14 +88,8 @@ class Extractor:
         step3_path = out / "step3.csv"
 
         timestamp = datetime.now().isoformat(timespec="seconds")
-        step2_rows = [
-            [timestamp, name, item["field"], json.dumps(item["items"], ensure_ascii=False)]
-            for item in step2
-        ]
-        step3_rows = [
-            [timestamp, name, item["field"], json.dumps(item["items"], ensure_ascii=False)]
-            for item in step3
-        ]
+        step2_rows = [[timestamp, name, item["field"], json.dumps(item["items"], ensure_ascii=False)] for item in step2]
+        step3_rows = [[timestamp, name, item["field"], json.dumps(item["items"], ensure_ascii=False)] for item in step3]
 
         self._append_rows(step2_path, STEP2_HEADERS, step2_rows)
         self._append_rows(step3_path, STEP3_HEADERS, step3_rows)
@@ -144,17 +127,13 @@ class Extractor:
 
                     trigger = self._find_dropdown_trigger(refreshed_container)
                     if trigger is None:
-                        logger.info(
-                            "%s.field.skip field=%s type=%s attempt=%s reason=no-valid-trigger",
-                            stage,
-                            field_name,
-                            field_type,
-                            attempt,
-                        )
+                        logger.info("%s.field.skip field=%s type=%s attempt=%s reason=no-valid-trigger", stage, field_name, field_type, attempt)
                         break
 
                     popper = self._open_dropdown(trigger)
                     popper_detected = popper is not None
+                    if field_type == "searchable":
+                        self._prime_searchable_dropdown(popper)
                     items = self._collect_open_dropdown_options(popper)
                     valid = self._validate_options(items)
                     logger.info(
@@ -168,36 +147,20 @@ class Extractor:
                         valid,
                     )
                     self._close_dropdown(trigger)
-
                     if valid:
                         break
                 except Exception:
-                    logger.exception(
-                        "%s.field.error field=%s type=%s attempt=%s popper_detected=%s",
-                        stage,
-                        field_name,
-                        field_type,
-                        attempt,
-                        popper_detected,
-                    )
+                    logger.exception("%s.field.error field=%s type=%s attempt=%s popper_detected=%s", stage, field_name, field_type, attempt, popper_detected)
                     try:
                         refreshed_container = self._locate_field_container(stage, field_name, occurrence)
                         if refreshed_container is not None:
-                            trigger = self._find_dropdown_trigger(refreshed_container)
-                            self._close_dropdown(trigger)
+                            self._close_dropdown(self._find_dropdown_trigger(refreshed_container))
                     except Exception:
                         logger.debug("%s.field.cleanup_failed field=%s", stage, field_name, exc_info=True)
-
                 time.sleep(0.2)
 
             if not valid:
-                logger.warning(
-                    "%s.field.final_empty field=%s type=%s option_count=%s",
-                    stage,
-                    field_name,
-                    field_type,
-                    len(items),
-                )
+                logger.warning("%s.field.final_empty field=%s type=%s option_count=%s", stage, field_name, field_type, len(items))
 
             results.append({"field": field_name, "items": items if valid else []})
 
@@ -207,18 +170,14 @@ class Extractor:
         def _ready(_: object) -> bool:
             if "/product/create/2" not in self.driver.current_url:
                 return False
-            return bool(self._find_elements(By.XPATH, GENERAL_INFO_CONTAINER_XPATH)) or bool(
-                self._find_elements(By.NAME, "model")
-            )
+            return bool(self._find_elements(By.XPATH, GENERAL_INFO_CONTAINER_XPATH)) or bool(self._find_elements(By.NAME, "model"))
 
         self.wait.until(_ready)
         logger.info("step2.ready url=%s", self.driver.current_url)
 
     def _wait_for_step3_ready(self) -> None:
         def _ready(_: object) -> bool:
-            return "/product/create/3" in self.driver.current_url or bool(
-                self._find_elements(By.XPATH, SPEC_FIELD_XPATH)
-            )
+            return "/product/create/3" in self.driver.current_url and self._step3_fields_ready()
 
         self.wait.until(_ready)
         logger.info("step3.ready url=%s", self.driver.current_url)
@@ -226,44 +185,34 @@ class Extractor:
     def _list_step2_fields(self) -> list[dict[str, object]]:
         counters: Counter[str] = Counter()
         fields: list[dict[str, object]] = []
-
         for container in self._find_elements(By.XPATH, GENERAL_INFO_CONTAINER_XPATH):
-            trigger = self._candidate_trigger_from_container(container)
-            if trigger is None:
+            if self._candidate_trigger_from_container(container) is None:
                 continue
-
             label = self._find_label_text(container)
             if not label:
                 continue
-
             counters[label] += 1
             fields.append({"label": label, "occurrence": counters[label]})
-
         return fields
 
     def _list_step3_fields(self) -> list[dict[str, object]]:
+        self._ensure_step3_panel_open()
         self._wait_for_step3_ready()
         counters: Counter[str] = Counter()
         fields: list[dict[str, object]] = []
-
         for container in self._find_elements(By.XPATH, SPEC_FIELD_XPATH):
+            if not self._is_visible(container):
+                continue
             label = self._find_label_text(container)
             if not label:
                 continue
-
             counters[label] += 1
             fields.append({"label": label, "occurrence": counters[label]})
-
         return fields
 
     def _locate_field_container(self, stage: str, label: str, occurrence: int) -> WebElement | None:
         xpath = GENERAL_INFO_CONTAINER_XPATH if stage == "step2" else SPEC_FIELD_XPATH
-        matches: list[WebElement] = []
-
-        for container in self._find_elements(By.XPATH, xpath):
-            if self._find_label_text(container) == label:
-                matches.append(container)
-
+        matches = [container for container in self._find_elements(By.XPATH, xpath) if self._is_visible(container) and self._find_label_text(container) == label]
         if occurrence <= len(matches):
             return matches[occurrence - 1]
         return None
@@ -280,11 +229,7 @@ class Extractor:
                 previous_poppers = self._visible_poppers()
                 popper = self._click_for_new_popper(candidate, previous_poppers, retries=1)
                 if popper is not None:
-                    logger.info(
-                        "trigger.valid field=%s candidate=%s",
-                        self._find_label_text(container),
-                        self._safe_text(candidate),
-                    )
+                    logger.info("trigger.valid field=%s candidate=%s", self._find_label_text(container), self._safe_text(candidate))
                     self._close_dropdown(candidate)
                     return candidate
             except Exception:
@@ -309,15 +254,15 @@ class Extractor:
         selected_items = [
             element
             for element in container.find_elements(By.XPATH, ".//p[normalize-space()]")
-            if self._safe_text(element) not in {"", "انتخاب کنید", self._find_label_text(container)}
+            if self._safe_text(element) not in {"", PLACEHOLDER_TEXT, self._find_label_text(container)}
         ]
-        search_inputs = container.find_elements(By.XPATH, ".//input[not(@type='hidden')]")
+        search_inputs = [element for element in container.find_elements(By.XPATH, ".//input[not(@type='hidden')]") if self._is_visible(element)]
 
         if search_inputs:
             return "searchable"
-        if "dropdownmultiple" in class_name or len(chips) > 0 or len(selected_items) > 1:
+        if "dropdownmultiple" in class_name or chips or len(selected_items) > 1:
             return "multi-select"
-        if "dropdown" in class_name or container.find_elements(By.XPATH, ".//span[normalize-space()='انتخاب کنید']"):
+        if "dropdown" in class_name or container.find_elements(By.XPATH, f".//span[normalize-space()='{PLACEHOLDER_TEXT}']"):
             return "single-select"
         return "unknown"
 
@@ -328,12 +273,7 @@ class Extractor:
             raise TimeoutException("Dropdown popper did not open")
         return popper
 
-    def _click_for_new_popper(
-        self,
-        trigger: WebElement,
-        previous_poppers: list[WebElement],
-        retries: int,
-    ) -> WebElement | None:
+    def _click_for_new_popper(self, trigger: WebElement, previous_poppers: list[WebElement], retries: int) -> WebElement | None:
         for _ in range(retries + 1):
             self._scroll_into_view(trigger)
             try:
@@ -343,33 +283,71 @@ class Extractor:
                 self._js_click(trigger)
 
             try:
-                return self.short_wait.until(lambda _: self._get_new_popper(previous_poppers))
+                return self.short_wait.until(lambda _: self._resolve_popper_for_trigger(trigger, previous_poppers))
             except TimeoutException:
                 time.sleep(0.2)
-
         return None
 
-    def _get_new_popper(self, previous_poppers: list[WebElement]) -> WebElement | None:
+    def _resolve_popper_for_trigger(self, trigger: WebElement, previous_poppers: list[WebElement]) -> WebElement | None:
         previous_ids = {element.id for element in previous_poppers}
-        for popper in self._visible_poppers():
+        visible_poppers = self._visible_poppers()
+        for popper in visible_poppers:
             if popper.id not in previous_ids and self._is_visible(popper):
                 return popper
-        return None
+
+        trigger_controls = (trigger.get_attribute("aria-controls") or "").strip()
+        trigger_labelled_by = (trigger.get_attribute("aria-labelledby") or "").strip()
+        for popper in visible_poppers:
+            popper_id = (popper.get_attribute("id") or "").strip()
+            popper_labelled_by = (popper.get_attribute("aria-labelledby") or "").strip()
+            if trigger_controls and popper_id == trigger_controls:
+                return popper
+            if trigger_labelled_by and popper_labelled_by == trigger_labelled_by:
+                return popper
+
+        return self._nearest_popper_to_trigger(trigger, visible_poppers)
+
+    def _nearest_popper_to_trigger(self, trigger: WebElement, poppers: list[WebElement]) -> WebElement | None:
+        best_popper: WebElement | None = None
+        best_distance: float | None = None
+        for popper in poppers:
+            try:
+                distance = float(
+                    self.driver.execute_script(
+                        """
+                        const trigger = arguments[0];
+                        const popper = arguments[1];
+                        const t = trigger.getBoundingClientRect();
+                        const p = popper.getBoundingClientRect();
+                        const tx = t.left + (t.width / 2);
+                        const ty = t.top + (t.height / 2);
+                        const px = p.left + (p.width / 2);
+                        const py = p.top + (p.height / 2);
+                        return Math.hypot(tx - px, ty - py);
+                        """,
+                        trigger,
+                        popper,
+                    )
+                )
+            except Exception:
+                continue
+            if best_distance is None or distance < best_distance:
+                best_distance = distance
+                best_popper = popper
+        return best_popper
 
     def _collect_open_dropdown_options(self, popper: WebElement) -> list[str]:
         last_count = -1
         stable_rounds = 0
         collected: list[str] = []
-
         for _ in range(12):
             self.driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight;", popper)
             time.sleep(0.15)
 
             current_items: list[str] = []
-            option_nodes = popper.find_elements(By.XPATH, ".//p[normalize-space()]")
-            for node in option_nodes:
+            for node in popper.find_elements(By.XPATH, ".//p[normalize-space()]"):
                 text = self._safe_text(node)
-                if not text or text == "انتخاب کنید" or "جست" in text:
+                if not text or text == PLACEHOLDER_TEXT or SEARCH_TEXT_FRAGMENT in text:
                     continue
                 if text not in current_items:
                     current_items.append(text)
@@ -381,26 +359,21 @@ class Extractor:
 
             collected = current_items
             last_count = len(current_items)
-
             if stable_rounds >= 2:
                 break
-
         return collected
 
     def _validate_options(self, items: list[str]) -> bool:
         cleaned = [item.strip() for item in items if item and item.strip()]
-        if len(cleaned) < 2:
+        if not cleaned:
             return False
-        if all(item == cleaned[0] for item in cleaned):
-            return False
-        if set(cleaned) == {"انتخاب کنید"}:
+        if set(cleaned) == {PLACEHOLDER_TEXT}:
             return False
         return True
 
     def _close_dropdown(self, trigger: WebElement | None) -> None:
         if trigger is None:
             return
-
         try:
             self._js_click(trigger)
             time.sleep(0.2)
@@ -408,6 +381,21 @@ class Extractor:
             logger.debug("dropdown.close click failed", exc_info=True)
             self.driver.execute_script("document.body.click();")
             time.sleep(0.2)
+
+    def _prime_searchable_dropdown(self, popper: WebElement) -> None:
+        inputs = [element for element in popper.find_elements(By.XPATH, ".//input[not(@type='hidden')]") if self._is_visible(element)]
+        if not inputs:
+            return
+        try:
+            search_input = inputs[0]
+            if not (search_input.get_attribute("value") or "").strip():
+                search_input.click()
+                search_input.send_keys("ا")
+                time.sleep(0.3)
+                search_input.clear()
+                time.sleep(0.2)
+        except Exception:
+            logger.debug("dropdown.search.prime_failed", exc_info=True)
 
     def _select_brand(self) -> str | None:
         brand_inputs = self._find_elements(By.NAME, "brand_id")
@@ -429,12 +417,8 @@ class Extractor:
 
         popper = self._open_dropdown(trigger)
         cards = self.wait.until(
-            lambda _: popper.find_elements(
-                By.XPATH,
-                ".//div[contains(@class,'pointer') and .//p[contains(@class,'text-subtitle-strong')]]",
-            )
+            lambda _: popper.find_elements(By.XPATH, ".//div[contains(@class,'pointer') and .//p[contains(@class,'text-subtitle-strong')]]")
         )
-
         for card in cards:
             try:
                 name = self._safe_text(card.find_element(By.CSS_SELECTOR, "p.text-subtitle-strong"))
@@ -445,7 +429,6 @@ class Extractor:
                     return name
             except Exception:
                 logger.exception("step2.brand.probe_failed")
-
         return None
 
     def _brand_selection_confirmed(self) -> bool:
@@ -455,7 +438,6 @@ class Extractor:
         ]:
             if any(element.is_displayed() for element in self._find_elements(by, value)):
                 return True
-
         return any((element.get_attribute("value") or "").strip() for element in self._find_elements(By.NAME, "brand_id"))
 
     def _fill_model_input(self) -> None:
@@ -463,12 +445,10 @@ class Extractor:
         if not model_inputs:
             logger.info("step2.model.skip reason=missing")
             return
-
         model_input = model_inputs[0]
         if (model_input.get_attribute("value") or "").strip():
             logger.info("step2.model.skip reason=already-populated")
             return
-
         self._scroll_into_view(model_input)
         model_input.click()
         model_input.clear()
@@ -482,11 +462,9 @@ class Extractor:
             container = self._locate_field_container("step2", field_name, occurrence)
             if container is None:
                 continue
-
             if self._is_disabled(container):
                 logger.info("step2.fill.skip field=%s reason=disabled", field_name)
                 continue
-
             if self._is_already_populated(container):
                 logger.info("step2.fill.skip field=%s reason=already-populated", field_name)
                 continue
@@ -512,8 +490,7 @@ class Extractor:
                 self._close_dropdown(trigger)
 
     def _fill_numeric_inputs(self) -> None:
-        numeric_inputs = self._find_elements(By.XPATH, "//input[@type='tel' and contains(@class,'NumberField')]")
-        for index, input_element in enumerate(numeric_inputs, start=1):
+        for index, input_element in enumerate(self._find_elements(By.XPATH, "//input[@type='tel' and contains(@class,'NumberField')]"), start=1):
             try:
                 if (input_element.get_attribute("value") or "").strip():
                     continue
@@ -525,18 +502,18 @@ class Extractor:
                 logger.exception("step2.number.error index=%s", index)
 
     def _advance_to_step3(self) -> None:
-        continue_button = self.wait.until(
-            EC.element_to_be_clickable((By.XPATH, "//button[.//div[normalize-space()='ادامه']]"))
-        )
+        continue_button = self.wait.until(EC.element_to_be_clickable((By.XPATH, "//button[.//div[normalize-space()='ادامه']]")))
         self._scroll_into_view(continue_button)
         self._js_click(continue_button)
         logger.info("step2.continue.clicked")
+        self.wait.until(lambda _: "/product/create/3" in self.driver.current_url)
+        self._ensure_step3_panel_open()
         self._wait_for_step3_ready()
 
     def _first_selectable_option(self, popper: WebElement) -> WebElement | None:
         for option in popper.find_elements(By.XPATH, ".//p[contains(@class,'pointer') and normalize-space()]"):
             text = self._safe_text(option)
-            if text and "جست" not in text and text != "انتخاب کنید":
+            if text and SEARCH_TEXT_FRAGMENT not in text and text != PLACEHOLDER_TEXT:
                 return option
         return None
 
@@ -544,14 +521,20 @@ class Extractor:
         candidates: list[WebElement] = []
         for xpath in [
             ".//input[@name='brand_id']",
-            ".//*[self::span or self::p][normalize-space()='انتخاب کنید']",
-            ".//*[@role='button']",
+            ".//input[not(@type='hidden')]",
+            f".//*[self::span or self::p][normalize-space()='{PLACEHOLDER_TEXT}']",
+            ".//*[@role='button' or @role='combobox']",
+            ".//*[@aria-haspopup='listbox' or @aria-haspopup='menu']",
+            ".//*[@tabindex='0']",
             ".//div[contains(@class,'cursor-pointer')]",
             ".//div[contains(@class,'DropDown')]",
+            ".//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]",
         ]:
             for candidate in container.find_elements(By.XPATH, xpath):
                 if candidate not in candidates:
                     candidates.append(candidate)
+        if container not in candidates:
+            candidates.append(container)
         return candidates
 
     def _candidate_trigger_from_container(self, container: WebElement) -> WebElement | None:
@@ -576,23 +559,20 @@ class Extractor:
         ]:
             for candidate in element.find_elements(By.XPATH, xpath):
                 text = self._safe_text(candidate)
-                if text and text != "انتخاب کنید":
+                if text and text != PLACEHOLDER_TEXT:
                     return text
         return "Unknown field"
 
     def _is_already_populated(self, container: WebElement) -> bool:
-        placeholder = container.find_elements(By.XPATH, ".//span[normalize-space()='انتخاب کنید']")
-        if placeholder:
+        if container.find_elements(By.XPATH, f".//span[normalize-space()='{PLACEHOLDER_TEXT}']"):
             return False
-
         chips = container.find_elements(By.XPATH, ".//*[contains(@class,'chip') or contains(@class,'tag')]")
         if any(self._safe_text(chip) for chip in chips):
             return True
-
         values = [
             self._safe_text(node)
             for node in container.find_elements(By.XPATH, ".//p[normalize-space()]")
-            if self._safe_text(node) not in {"", self._find_label_text(container), "انتخاب کنید"}
+            if self._safe_text(node) not in {"", self._find_label_text(container), PLACEHOLDER_TEXT}
         ]
         return bool(values)
 
@@ -601,21 +581,43 @@ class Extractor:
         class_name = (element.get_attribute("class") or "").lower()
         if "chip" in class_name or "tag" in class_name:
             return True
-        if text and text != "انتخاب کنید" and element.tag_name.lower() in {"p", "span"}:
+        if element.tag_name.lower() in {"input", "label", "button"}:
+            return False
+        if element.get_attribute("role") in {"button", "combobox", "listbox"}:
+            return False
+        if (element.get_attribute("tabindex") or "").strip() == "0":
+            return False
+        if element.get_attribute("aria-haspopup"):
+            return False
+        if text and text != PLACEHOLDER_TEXT and element.tag_name.lower() in {"p", "span"}:
             return True
         return False
+
+    def _step3_fields_ready(self) -> bool:
+        visible_fields = [container for container in self._find_elements(By.XPATH, SPEC_FIELD_XPATH) if self._is_visible(container)]
+        return any(self._candidate_trigger_from_container(container) is not None for container in visible_fields)
+
+    def _ensure_step3_panel_open(self) -> None:
+        if self._step3_fields_ready():
+            return
+        expand_buttons = [button for button in self._find_elements(By.XPATH, STEP3_EXPAND_BUTTON_XPATH) if self._is_visible(button)]
+        if not expand_buttons:
+            logger.info("step3.expand.skip reason=missing-button")
+            return
+        expand_button = expand_buttons[0]
+        self._scroll_into_view(expand_button)
+        self._js_click(expand_button)
+        logger.info("step3.expand.clicked")
+        self.wait.until(lambda _: self._step3_fields_ready())
 
     def _is_disabled(self, element: WebElement) -> bool:
         try:
             bg_color = (element.value_of_css_property("background-color") or "").strip().lower()
         except Exception:
             bg_color = ""
-
         if bg_color in {"rgb(240, 240, 241)", "rgba(240, 240, 241, 1)"}:
             return True
-
-        aria_disabled = (element.get_attribute("aria-disabled") or "").strip().lower()
-        return aria_disabled == "true"
+        return (element.get_attribute("aria-disabled") or "").strip().lower() == "true"
 
     def _find_elements(self, by: str, value: str) -> list[WebElement]:
         try:
@@ -657,7 +659,6 @@ class Extractor:
     @staticmethod
     def _append_rows(path: Path, headers: list[str], rows: list[list[str]]) -> None:
         file_exists = path.exists()
-
         with open(path, "a", newline="", encoding="utf-8-sig") as file_obj:
             writer = csv.writer(file_obj)
             if not file_exists:
