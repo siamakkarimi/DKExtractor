@@ -29,9 +29,9 @@ STEP3_EXPAND_BUTTON_XPATH=f"//button[contains(normalize-space(),'{STEP3_EXPAND_T
 
 class Extractor:
     def __init__(self,driver):
-        self.driver=driver; self.wait=WebDriverWait(driver,30); self.short_wait=WebDriverWait(driver,5); self._brand_handled=False
+        self.driver=driver; self.wait=WebDriverWait(driver,30); self.short_wait=WebDriverWait(driver,5); self._brand_handled=False; self._brand_resolved=False
     def extract_product(self,product_name:str)->tuple[list[dict[str,list[str]]],list[dict[str,list[str]]]]:
-        self._brand_handled=False
+        self._brand_handled=False; self._brand_resolved=False
         logger.info("extract.start product=%s url=%s page_state=%s",product_name,self.driver.current_url,self._page_state())
         self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
         logger.info("extract.done product=%s step2_fields=%s step3_fields=%s",product_name,len(step2),len(step3)); return step2,step3
@@ -197,10 +197,10 @@ class Extractor:
     def _select_brand(self)->str|None:
         brand_inputs=self._find_elements(By.NAME,"brand_id")
         if not brand_inputs: logger.info("step2.brand.skip reason=missing"); return None
-        brand_input=brand_inputs[0]; current_value=(brand_input.get_attribute("value") or "").strip()
+        brand_input=brand_inputs[0]; current_value=self._confirm_brand_value(brand_input,log=False)
         if current_value:
-            self._brand_handled=True
-            logger.info("step2.brand.already_set value=%s",current_value)
+            self._brand_handled=True; self._brand_resolved=True
+            logger.info("step2.brand.already_resolved value=%s",current_value)
             return current_value
         if self._brand_handled:
             logger.warning("step2.brand.reopen.blocked")
@@ -212,17 +212,19 @@ class Extractor:
             raise RuntimeError("Brand field is required but no clickable brand trigger was found.")
         self._brand_handled=True
         logger.info("step2.brand.opened.once")
-        popper=self._open_dropdown(trigger)
         logger.info("step2.brand.waiting_for_user")
         try:
+            self._open_brand_once(trigger)
             selected_value=self.wait.until(lambda _ : self._wait_for_brand_selection(brand_input))
-            logger.info("step2.brand.selected value=%s",selected_value)
+            self._brand_resolved=True
+            logger.info("step2.brand.selected.confirmed value=%s",selected_value)
             return selected_value
         except Exception:
+            logger.warning("step2.brand.selected.unconfirmed")
             logger.warning("step2.brand.timeout")
             raise RuntimeError("Brand selection timed out before the field received a value.")
         finally:
-            self._close_dropdown(trigger)
+            self._dismiss_open_poppers()
     def _read_brand_value(self,brand_input:WebElement)->str:
         value=(brand_input.get_attribute("value") or "").strip()
         if value:
@@ -241,14 +243,44 @@ class Extractor:
             if self._is_visible(candidate) and not self._is_disabled(candidate):
                 return candidate
         return None
+    def _open_brand_once(self,trigger:WebElement)->None:
+        self._scroll_into_view(trigger)
+        try: trigger.click()
+        except Exception: self._js_click(trigger)
+        time.sleep(0.5)
     def _wait_for_brand_selection(self,brand_input:WebElement)->str|bool:
         deadline=time.time()+BRAND_WAIT_SECONDS
         while time.time()<deadline:
-            value=self._read_brand_value(brand_input)
+            logger.info("step2.brand.settle.check")
+            value=self._confirm_brand_value(brand_input,log=True)
             if value:
                 return value
             time.sleep(0.3)
         return False
+    def _confirm_brand_value(self,brand_input:WebElement,log:bool)->str:
+        value=self._read_brand_value(brand_input)
+        if not value:
+            return ""
+        deadline=time.time()+2
+        settled=value
+        while time.time()<deadline:
+            latest=self._read_brand_value(brand_input)
+            if latest:
+                settled=latest
+            time.sleep(0.15)
+        if log and self._brand_validation_cleared(brand_input):
+            logger.info("step2.brand.validation.clear")
+        return settled
+    def _brand_validation_cleared(self,brand_input:WebElement)->bool:
+        container=self._find_parent_label_or_self(brand_input)
+        errors=[self._normalize_label(self._safe_text(node)) for node in container.find_elements(By.XPATH,".//p[normalize-space()]")]
+        return not any("\u062e\u0627\u0644\u06cc" in text and "\u0628\u0631\u0646\u062f" in text for text in errors)
+    def _dismiss_open_poppers(self)->None:
+        if not self._visible_poppers():
+            return
+        try: self.driver.execute_script("document.body.click();")
+        except Exception: logger.debug("brand.dismiss.failed",exc_info=True)
+        time.sleep(0.2)
     def _brand_selection_confirmed(self)->bool:
         for by,value in [(By.CSS_SELECTOR,"div.overflow-hidden[style*='max-height: 26px']"),(By.XPATH,f"//*[contains(text(),'{COMMISSION_TEXT}')]")]:
             if any(e.is_displayed() for e in self._find_elements(by,value)): return True

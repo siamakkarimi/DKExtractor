@@ -1678,3 +1678,259 @@ Stacktrace:
 	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
 	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
 
+2026-04-14 23:16:53 | INFO | core.logging_config | ============================================================
+2026-04-14 23:16:53 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 23:16:53 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 23:16:53 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 23:16:53 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 23:16:53 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 23:16:53 | INFO | core.logging_config | Frozen: False
+2026-04-14 23:16:55 | INFO | core.logging_config | ============================================================
+2026-04-14 23:16:55 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 23:16:55 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 23:16:55 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 23:16:55 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 23:16:55 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 23:16:55 | INFO | core.logging_config | Frozen: False
+2026-04-14 23:16:55 | INFO | ui.main_window | Application started
+2026-04-14 23:16:56 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 23:17:02 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 23:17:02 | INFO | core.worker | Launching browser runtime
+2026-04-14 23:17:02 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 23:17:02 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 23:17:02 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 23:17:04 | INFO | core.session | navigating to Digikala
+2026-04-14 23:17:12 | INFO | core.session | login confirmed
+2026-04-14 23:17:12 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 23:17:12 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 23:17:12 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 23:17:13 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 23:17:13 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:17:14 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 23:17:15 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 23:17:16 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:17:24 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:17:24 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 23:17:26 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:17:33 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:17:34 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 23:17:35 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:17:43 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:17:44 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 23:17:45 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:17:53 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:17:53 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 23:17:53 | INFO | core.extractor | step2.brand.required
+2026-04-14 23:17:53 | INFO | core.extractor | step2.brand.opened.once
+2026-04-14 23:18:16 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: Dropdown popper did not open
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 36, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 41, in complete_step2_required_fields
+    logger.info("step2.fill.start product=%s",product_name); selected=self._select_brand(); logger.info("step2.fill.brand product=%s selected=%s",product_name,selected or "")
+                                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 215, in _select_brand
+    popper=self._open_dropdown(trigger)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 143, in _open_dropdown
+    if popper is None: raise TimeoutException("Dropdown popper did not open")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.TimeoutException: Message: Dropdown popper did not open
+
+2026-04-14 23:18:16 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 23:18:16 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-14 23:18:19 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 23:18:20 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:18:21 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 23:18:21 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 23:18:22 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:18:24 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:18:25 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 23:18:26 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:18:28 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:18:29 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 23:18:30 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:18:37 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:18:38 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 23:18:39 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:18:47 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:18:47 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-14 23:18:47 | INFO | core.extractor | step2.brand.required
+2026-04-14 23:18:47 | INFO | core.extractor | step2.brand.opened.once
+2026-04-14 23:19:16 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: Dropdown popper did not open
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 123, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 36, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 41, in complete_step2_required_fields
+    logger.info("step2.fill.start product=%s",product_name); selected=self._select_brand(); logger.info("step2.fill.brand product=%s selected=%s",product_name,selected or "")
+                                                                      ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 215, in _select_brand
+    popper=self._open_dropdown(trigger)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 143, in _open_dropdown
+    if popper is None: raise TimeoutException("Dropdown popper did not open")
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+selenium.common.exceptions.TimeoutException: Message: Dropdown popper did not open
+
+2026-04-14 23:28:27 | INFO | core.logging_config | ============================================================
+2026-04-14 23:28:27 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 23:28:27 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 23:28:27 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 23:28:27 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 23:28:27 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 23:28:27 | INFO | core.logging_config | Frozen: False
+2026-04-14 23:28:30 | INFO | core.logging_config | ============================================================
+2026-04-14 23:28:30 | INFO | core.logging_config | DKExtractor startup
+2026-04-14 23:28:30 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-14 23:28:30 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-14 23:28:30 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-14 23:28:30 | INFO | core.logging_config | Platform: Windows 10
+2026-04-14 23:28:30 | INFO | core.logging_config | Frozen: False
+2026-04-14 23:28:30 | INFO | ui.main_window | Application started
+2026-04-14 23:28:30 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 23:28:36 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-14 23:28:36 | INFO | core.worker | Launching browser runtime
+2026-04-14 23:28:36 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-14 23:28:36 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-14 23:28:36 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-14 23:28:38 | INFO | core.session | navigating to Digikala
+2026-04-14 23:28:41 | INFO | core.session | login confirmed
+2026-04-14 23:28:41 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-14 23:28:41 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 23:28:41 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-14 23:28:42 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-14 23:28:43 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:28:44 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 23:28:44 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 23:28:45 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:28:53 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:28:54 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 23:28:55 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:28:57 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:28:58 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 23:28:59 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:29:07 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:29:07 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 23:29:08 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:29:16 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:29:16 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-14 23:29:16 | INFO | core.extractor | step2.brand.required
+2026-04-14 23:29:17 | INFO | core.extractor | step2.brand.opened.once
+2026-04-14 23:29:17 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-14 23:29:17 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:18 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:18 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:19 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:19 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:20 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:20 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:20 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:21 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:21 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:21 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:29:24 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-14 23:29:24 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-14 23:29:24 | INFO | core.extractor | step2.fill.brand product=کانتور selected=پاناسونیک
+2026-04-14 23:29:24 | INFO | core.extractor | step2.model.filled
+2026-04-14 23:29:24 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:29:27 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:29:34 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-14 23:29:36 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:29:43 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-14 23:29:45 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:29:52 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-14 23:29:54 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:29:55 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-14 23:29:56 | INFO | core.extractor | step2.number.filled index=1
+2026-04-14 23:29:56 | INFO | core.extractor | step2.number.filled index=2
+2026-04-14 23:29:56 | INFO | core.extractor | step2.number.filled index=3
+2026-04-14 23:29:57 | INFO | core.extractor | step2.number.filled index=4
+2026-04-14 23:29:57 | INFO | core.extractor | step2.continue.clicked
+2026-04-14 23:29:58 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7039294
+2026-04-14 23:29:58 | INFO | core.extractor | step2.fill.done product=کانتور
+2026-04-14 23:29:59 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7039294
+2026-04-14 23:29:59 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7039294
+2026-04-14 23:29:59 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=3
+2026-04-14 23:30:00 | INFO | core.extractor | step3.field.detected field=سازگار با نوع پوست type=single-select
+2026-04-14 23:30:01 | INFO | core.extractor | trigger.valid field=سازگار با نوع پوست candidate=انتخاب کنید
+2026-04-14 23:30:09 | INFO | core.extractor | step3.field.attempt field=سازگار با نوع پوست type=single-select attempt=1 popper_detected=True option_count=9 valid=True
+2026-04-14 23:30:10 | INFO | core.extractor | step3.field.detected field=جلوه رنگ type=multi-select
+2026-04-14 23:30:11 | INFO | core.extractor | trigger.valid field=جلوه رنگ candidate=انتخاب کنید
+2026-04-14 23:30:19 | INFO | core.extractor | step3.field.attempt field=جلوه رنگ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-14 23:30:19 | INFO | core.extractor | step3.field.detected field=نوع کانتور type=multi-select
+2026-04-14 23:30:21 | INFO | core.extractor | trigger.valid field=نوع کانتور candidate=انتخاب کنید
+2026-04-14 23:30:28 | INFO | core.extractor | step3.field.attempt field=نوع کانتور type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:30:29 | INFO | core.extractor | extract.done product=کانتور step2_fields=4 step3_fields=3
+2026-04-14 23:30:29 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 23:30:29 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-14 23:30:30 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-14 23:30:30 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:30:31 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-14 23:30:32 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-14 23:30:33 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:30:35 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:30:36 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-14 23:30:37 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:30:45 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:30:45 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-14 23:30:47 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:30:54 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:30:55 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-14 23:30:56 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:31:04 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-14 23:31:04 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-14 23:31:04 | INFO | core.extractor | step2.brand.required
+2026-04-14 23:31:04 | INFO | core.extractor | step2.brand.opened.once
+2026-04-14 23:31:04 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-14 23:31:05 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:31:06 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:31:06 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:31:07 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:31:07 | INFO | core.extractor | step2.brand.settle.check
+2026-04-14 23:31:09 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-14 23:31:09 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-14 23:31:09 | INFO | core.extractor | step2.fill.brand product=هایلایتر selected=پاناسونیک
+2026-04-14 23:31:10 | INFO | core.extractor | step2.model.filled
+2026-04-14 23:31:10 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-14 23:31:12 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-14 23:31:14 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-14 23:31:16 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-14 23:31:23 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-14 23:31:25 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-14 23:31:32 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-14 23:31:33 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-14 23:31:41 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-14 23:31:41 | INFO | core.extractor | step2.number.filled index=1
+2026-04-14 23:31:42 | INFO | core.extractor | step2.number.filled index=2
+2026-04-14 23:31:42 | INFO | core.extractor | step2.number.filled index=3
+2026-04-14 23:31:42 | INFO | core.extractor | step2.number.filled index=4
+2026-04-14 23:31:43 | INFO | core.extractor | step2.continue.clicked
+2026-04-14 23:31:44 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039300
+2026-04-14 23:31:44 | INFO | core.extractor | step2.fill.done product=هایلایتر
+2026-04-14 23:31:44 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039300
+2026-04-14 23:31:45 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7039300
+2026-04-14 23:31:45 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=5
+2026-04-14 23:31:46 | INFO | core.extractor | step3.field.detected field=مشخصات محصول type=single-select
+2026-04-14 23:31:47 | INFO | core.extractor | trigger.valid field=مشخصات محصول candidate=انتخاب کنید
+2026-04-14 23:31:50 | INFO | core.extractor | step3.field.attempt field=مشخصات محصول type=single-select attempt=1 popper_detected=True option_count=23 valid=True
+2026-04-14 23:31:50 | INFO | core.extractor | step3.field.detected field=سازگار با نوع پوست type=single-select
+2026-04-14 23:31:52 | INFO | core.extractor | trigger.valid field=سازگار با نوع پوست candidate=انتخاب کنید
+2026-04-14 23:31:54 | INFO | core.extractor | step3.field.attempt field=سازگار با نوع پوست type=single-select attempt=1 popper_detected=True option_count=9 valid=True
+2026-04-14 23:31:55 | INFO | core.extractor | step3.field.detected field=جلوه رنگ type=multi-select
+2026-04-14 23:31:56 | INFO | core.extractor | trigger.valid field=جلوه رنگ candidate=انتخاب کنید
+2026-04-14 23:32:04 | INFO | core.extractor | step3.field.attempt field=جلوه رنگ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-14 23:32:04 | INFO | core.extractor | step3.field.detected field=نوع هایلایتر type=multi-select
+2026-04-14 23:32:06 | INFO | core.extractor | trigger.valid field=نوع هایلایتر candidate=انتخاب کنید
+2026-04-14 23:32:13 | INFO | core.extractor | step3.field.attempt field=نوع هایلایتر type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-14 23:32:14 | INFO | core.extractor | step3.field.detected field=تناژ رنگ type=multi-select
+2026-04-14 23:32:15 | INFO | core.extractor | trigger.valid field=تناژ رنگ candidate=انتخاب کنید
+2026-04-14 23:32:23 | INFO | core.extractor | step3.field.attempt field=تناژ رنگ type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
+2026-04-14 23:32:23 | INFO | core.extractor | extract.done product=هایلایتر step2_fields=4 step3_fields=5
