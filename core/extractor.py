@@ -39,7 +39,10 @@ class Extractor:
         self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
         logger.info("extract.done product=%s step2_fields=%s step3_fields=%s",product_name,len(step2),len(step3)); return step2,step3
     def extract_step2(self)->list[dict[str,list[str]]]:
-        refs=self._list_step2_fields(); logger.info("step2.scan.start page_state=%s field_count=%s",self._page_state(),len(refs)); return self._extract_fields(refs,"step2")
+        refs=self._list_step2_fields(); logger.info("step2.scan.start page_state=%s field_count=%s",self._page_state(),len(refs))
+        results=self._dedupe_stage_rows(self._extract_fields(refs,"step2"),"step2")
+        logger.info("step2.aggregate.done count=%s",len(results))
+        return results
     def complete_step2_required_fields(self,product_name:str)->None:
         logger.info("step2.fill.start product=%s",product_name); selected=self._select_brand(); logger.info("step2.fill.brand product=%s selected=%s",product_name,selected or "")
         self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
@@ -47,15 +50,21 @@ class Extractor:
         self._ensure_step3_panel_open(); self._wait_for_step3_ready()
         initial_refs=self._list_step3_fields()
         logger.info("step3.scan.start page_state=%s field_count=%s",self._page_state(),len(initial_refs))
-        results=self._extract_fields(initial_refs,"step3")
+        results=self._dedupe_stage_rows(self._extract_fields(initial_refs,"step3"),"step3")
         optional_refs=self._expand_and_list_step3_optional_fields(initial_refs)
         if optional_refs:
-            results.extend(self._extract_fields(optional_refs,"step3"))
+            results=self._merge_stage_results(results,self._extract_fields(optional_refs,"step3"),"step3","optional")
+        results=self._dedupe_stage_rows(results,"step3")
+        logger.info("step3.aggregate.done count=%s",len(results))
         return results
     def save(self,name:str,step2:list[dict[str,list[str]]],step3:list[dict[str,list[str]]])->None:
         ensure_app_dirs(); out=output_dir(); ts=datetime.now().isoformat(timespec="seconds")
-        self._append_rows(out/"step2.csv",STEP2_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step2])
-        self._append_rows(out/"step3.csv",STEP3_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step3])
+        step2_rows=self._dedupe_stage_rows(step2,"step2")
+        step3_rows=self._dedupe_stage_rows(step3,"step3")
+        logger.info("save.step2.rows count=%s",len(step2_rows))
+        logger.info("save.step3.rows count=%s",len(step3_rows))
+        self._append_rows(out/"step2.csv",STEP2_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step2_rows])
+        self._append_rows(out/"step3.csv",STEP3_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step3_rows])
     def _extract_fields(self,refs:list[dict[str,object]],stage:str)->list[dict[str,list[str]]]:
         results=[]
         for ref in refs:
@@ -435,6 +444,32 @@ class Extractor:
             return "no-new-fields"
     def _step3_ref_key(self,ref:dict[str,object])->tuple[str,int]:
         return self._normalize_label(str(ref["label"])),int(ref["occurrence"])
+    def _field_result_key(self,field_name:str)->str:
+        return self._normalize_label(field_name)
+    def _dedupe_stage_rows(self,rows:list[dict[str,list[str]]],stage:str)->list[dict[str,list[str]]]:
+        return self._merge_stage_results([],rows,stage,"dedupe")
+    def _merge_stage_results(self,existing:list[dict[str,list[str]]],new_rows:list[dict[str,list[str]]],stage:str,source:str)->list[dict[str,list[str]]]:
+        merged=[{"field":str(row["field"]),"items":list(row.get("items",[]))} for row in existing]
+        index_by_key={self._field_result_key(str(row["field"])):idx for idx,row in enumerate(merged)}
+        for row in new_rows:
+            field_name=str(row["field"]); key=self._field_result_key(field_name); items=self._merge_items([],list(row.get("items",[])))
+            if key not in index_by_key:
+                index_by_key[key]=len(merged); merged.append({"field":field_name,"items":items}); continue
+            idx=index_by_key[key]; current=merged[idx]
+            merged_items=self._merge_items(list(current.get("items",[])),items)
+            if merged_items!=current.get("items",[]):
+                logger.info("%s.aggregate.merge field=%s source=%s",stage,current["field"],source)
+            current["items"]=merged_items
+            if (not self._normalize_label(str(current["field"])) or str(current["field"]).startswith("Unknown")) and field_name:
+                current["field"]=field_name
+        return merged
+    def _merge_items(self,existing:list[str],new_items:list[str])->list[str]:
+        merged=[]; seen=set()
+        for item in [*(existing or []),*(new_items or [])]:
+            text=self._normalize_label(str(item))
+            if not text or text in seen: continue
+            seen.add(text); merged.append(str(item).strip())
+        return merged
     def _list_visible_step3_field_refs(self)->list[dict[str,object]]:
         counters=Counter(); fields=[]
         for container in self._find_elements(By.XPATH,SPEC_FIELD_XPATH):
