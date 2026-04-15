@@ -25,7 +25,7 @@ BRAND_WAIT_SECONDS=12
 GENERAL_INFO_CONTAINER_XPATH="//div[contains(@class,'FormComponentFrame__input-container')][.//span[normalize-space()='"+PLACEHOLDER_TEXT+"'] or .//input[@name='brand_id']]"
 SPEC_FIELD_XPATH="//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
 POPPER_XPATH="//div[(@data-popper-placement or @role='list' or contains(@class,'DropDown__popper__') or contains(@class,'DropDownMultiple__popper__')) and not(contains(@style,'display: none'))]"
-STEP3_EXPAND_BUTTON_XPATH=f"//button[contains(normalize-space(),'{STEP3_EXPAND_TEXT}')] | //div[contains(normalize-space(),'{STEP3_EXPAND_TEXT}')]"
+STEP3_EXPAND_TEXT_NODE_XPATH=f"//*[self::button or self::div or self::span or self::p][contains(normalize-space(),'{STEP3_EXPAND_TEXT}')]"
 
 class Extractor:
     def __init__(self,driver):
@@ -408,24 +408,61 @@ class Extractor:
         return any(self._candidate_trigger_from_container(c) is not None for c in visible)
     def _ensure_step3_panel_open(self)->None:
         if self._step3_fields_ready(): return
-        expand_buttons=[b for b in self._find_elements(By.XPATH,STEP3_EXPAND_BUTTON_XPATH) if self._is_visible(b)]
-        if not expand_buttons: logger.info("step3.expand.skip reason=missing-button"); return
-        expand_button=expand_buttons[0]; self._scroll_into_view(expand_button); self._js_click(expand_button); logger.info("step3.expand.clicked"); self.wait.until(lambda _:self._step3_fields_ready())
+        expand_button=self._find_step3_expand_click_target()
+        if expand_button is None: logger.info("step3.expand.skip reason=missing-button"); return
+        self._scroll_into_view(expand_button); self._js_click(expand_button); logger.info("step3.expand.clicked"); self.wait.until(lambda _:self._step3_fields_ready())
     def _expand_step3_optional_section(self,baseline_count:int)->str:
-        expand_buttons=[b for b in self._find_elements(By.XPATH,STEP3_EXPAND_BUTTON_XPATH) if self._is_visible(b)]
-        if not expand_buttons:
-            current_count=len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])
-            return "already_open" if current_count>baseline_count else "missing-button"
-        expand_button=expand_buttons[0]
-        self._scroll_into_view(expand_button); self._js_click(expand_button)
+        before_keys={self._step3_ref_key(ref) for ref in self._list_visible_step3_field_refs()}
+        expand_button=self._find_step3_expand_click_target()
+        if expand_button is None:
+            return "already_open" if self._step3_optional_expanded(before_keys,baseline_count) else "missing-button"
+        logger.info("step3.optional.button.found tag=%s text=%s",expand_button.tag_name,self._safe_text(expand_button))
+        self._scroll_into_view(expand_button); logger.info("step3.optional.button.click")
+        try: expand_button.click()
+        except Exception: self._js_click(expand_button)
         try:
-            self.wait.until(lambda _ : len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])>baseline_count)
+            self.wait.until(lambda _ : self._step3_optional_expanded(before_keys,baseline_count))
+            logger.info("step3.optional.expand.confirmed")
             return "clicked"
         except TimeoutException:
-            current_count=len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])
-            return "already_open" if current_count>baseline_count else "no-new-fields"
+            if self._step3_optional_expanded(before_keys,baseline_count):
+                logger.info("step3.optional.expand.confirmed")
+                return "clicked"
+            logger.info("step3.optional.expand.failed")
+            return "no-new-fields"
     def _step3_ref_key(self,ref:dict[str,object])->tuple[str,int]:
         return self._normalize_label(str(ref["label"])),int(ref["occurrence"])
+    def _list_visible_step3_field_refs(self)->list[dict[str,object]]:
+        counters=Counter(); fields=[]
+        for container in self._find_elements(By.XPATH,SPEC_FIELD_XPATH):
+            if not self._is_visible(container): continue
+            label=self._find_label_text(container)
+            if not label: continue
+            counters[label]+=1; fields.append({"label":label,"occurrence":counters[label]})
+        return fields
+    def _step3_optional_expanded(self,before_keys:set[tuple[str,int]],baseline_count:int)->bool:
+        current_refs=self._list_visible_step3_field_refs()
+        current_keys={self._step3_ref_key(ref) for ref in current_refs}
+        if len(current_keys)>baseline_count and current_keys!=before_keys:
+            return True
+        return self._find_step3_expand_click_target() is None and len(current_keys)>=baseline_count
+    def _find_step3_expand_click_target(self)->WebElement|None:
+        for node in self._find_elements(By.XPATH,STEP3_EXPAND_TEXT_NODE_XPATH):
+            if not self._is_visible(node): continue
+            target=self._resolve_clickable_ancestor(node)
+            if target is None or not self._is_visible(target) or self._is_disabled(target): continue
+            return target
+        return None
+    def _resolve_clickable_ancestor(self,node:WebElement)->WebElement|None:
+        candidates=[node]
+        for candidate in node.find_elements(By.XPATH,"./ancestor-or-self::*[@role='button' or @role='link' or @tabindex='0' or self::button or self::a or contains(@class,'cursor-pointer') or contains(@class,'pointer')][1]"):
+            if candidate not in candidates: candidates.append(candidate)
+        for candidate in node.find_elements(By.XPATH,"./ancestor-or-self::div[1]"):
+            if candidate not in candidates: candidates.append(candidate)
+        for candidate in candidates:
+            if self._is_visible(candidate):
+                return candidate
+        return None
     def _is_disabled(self,element:WebElement)->bool:
         try: bg_color=(element.value_of_css_property("background-color") or "").strip().lower()
         except Exception: bg_color=""
