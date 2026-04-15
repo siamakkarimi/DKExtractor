@@ -69,15 +69,12 @@ class ExtractionWorker(QObject):
                 return
 
             if self._login_only:
+                logger.info("login_only.start")
                 success_count = 1
                 self.progress.emit(1, 1)
-                self.log.emit("Login successful. Browser will stay open until you click Stop or close it.")
-                stopped = session.wait_for_login_only_end(stop_requested=self.is_stop_requested)
-
-                if stopped:
-                    self.log.emit("Login-only flow stopped by user.")
-                else:
-                    self.log.emit("Login-only browser was closed after successful login.")
+                logger.info("login_only.login_confirmed")
+                self.log.emit("Login successful. Login Only is finishing and extraction is ready.")
+                logger.info("login_only.complete")
                 return
 
             extractor = Extractor(driver)

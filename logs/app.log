@@ -3071,3 +3071,886 @@ Stacktrace:
 2026-04-15 20:56:48 | INFO | core.logging_config | Frozen: False
 2026-04-15 20:56:48 | INFO | ui.main_window | Application started
 2026-04-15 20:56:51 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:41:11 | INFO | core.logging_config | ============================================================
+2026-04-15 21:41:11 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:41:11 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:41:11 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:41:11 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:41:11 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:41:11 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:41:14 | INFO | core.logging_config | ============================================================
+2026-04-15 21:41:14 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:41:14 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:41:14 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:41:14 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:41:14 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:41:14 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:41:14 | INFO | ui.main_window | Application started
+2026-04-15 21:41:14 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:41:20 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:41:20 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:41:20 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:41:20 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:41:22 | INFO | core.session | navigating to Digikala
+2026-04-15 21:41:27 | INFO | core.session | login confirmed
+2026-04-15 21:41:27 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:41:27 | INFO | core.worker | login_only.start
+2026-04-15 21:41:27 | INFO | core.worker | login_only.login_confirmed
+2026-04-15 21:41:27 | INFO | core.worker | login_only.complete
+2026-04-15 21:41:45 | INFO | core.logging_config | ============================================================
+2026-04-15 21:41:45 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:41:45 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:41:45 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:41:45 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:41:45 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:41:45 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:41:48 | INFO | core.logging_config | ============================================================
+2026-04-15 21:41:48 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:41:48 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:41:48 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:41:48 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:41:48 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:41:48 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:41:48 | INFO | ui.main_window | Application started
+2026-04-15 21:41:48 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:42:01 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:42:01 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:42:01 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:42:01 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:42:02 | INFO | core.session | navigating to Digikala
+2026-04-15 21:42:05 | INFO | core.session | login confirmed
+2026-04-15 21:42:05 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:42:05 | INFO | core.worker | login_only.start
+2026-04-15 21:42:05 | INFO | core.worker | login_only.login_confirmed
+2026-04-15 21:42:05 | INFO | core.worker | login_only.complete
+2026-04-15 21:42:08 | INFO | ui.main_window | ui.state.ready_after_login_only
+2026-04-15 21:42:38 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:42:38 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:42:38 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:42:38 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:42:38 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:42:40 | INFO | core.session | navigating to Digikala
+2026-04-15 21:42:43 | INFO | core.session | login confirmed
+2026-04-15 21:42:43 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:42:43 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:42:43 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-15 21:42:44 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:42:44 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:42:45 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-15 21:42:46 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-15 21:42:47 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:42:49 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:42:50 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-15 21:42:51 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:42:53 | ERROR | core.extractor | step2.field.error field=دسته بندی کالا type=single-select attempt=1 popper_detected=False
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 89, in _extract_fields
+    popper=self._open_dropdown(trigger); popper_detected=popper is not None
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 187, in _open_dropdown
+    popper=self._click_for_new_popper(trigger,self._visible_poppers(),retries=2)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 195, in _click_for_new_popper
+    try: return self.short_wait.until(lambda _:self._resolve_popper_for_trigger(trigger,previous_poppers))
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 195, in <lambda>
+    try: return self.short_wait.until(lambda _:self._resolve_popper_for_trigger(trigger,previous_poppers))
+                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 202, in _resolve_popper_for_trigger
+    trigger_controls=(trigger.get_attribute("aria-controls") or "").strip(); trigger_labelled=(trigger.get_attribute("aria-labelledby") or "").strip()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webelement.py", line 213, in get_attribute
+    attribute_value = self.parent.execute_script(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 532, in execute_script
+    return self.execute(command, {"script": script, "args": converted_args})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753db2d]
+	chromedriver!(No symbol) [0x7ff7a7528ca2]
+	chromedriver!(No symbol) [0x7ff7a754f416]
+	chromedriver!(No symbol) [0x7ff7a75c70e0]
+	chromedriver!(No symbol) [0x7ff7a75e3482]
+	chromedriver!(No symbol) [0x7ff7a7589298]
+	chromedriver!(No symbol) [0x7ff7a758a183]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7a77e3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7a77e37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7a77c7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:42:54 | ERROR | core.extractor | step2.field.error field=دسته بندی کالا type=single-select attempt=2 popper_detected=False
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 85, in _extract_fields
+    if refreshed is None: raise RuntimeError("Container disappeared before attempt")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Container disappeared before attempt
+2026-04-15 21:42:54 | ERROR | core.extractor | step2.field.error field=دسته بندی کالا type=single-select attempt=3 popper_detected=False
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\extractor.py", line 85, in _extract_fields
+    if refreshed is None: raise RuntimeError("Container disappeared before attempt")
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Container disappeared before attempt
+2026-04-15 21:42:54 | WARNING | core.extractor | step2.field.final_empty field=دسته بندی کالا type=single-select option_count=0
+2026-04-15 21:42:54 | WARNING | core.extractor | step2.field.missing field=مبدا کالا occurrence=1
+2026-04-15 21:42:54 | WARNING | core.extractor | step2.field.final_empty field=مبدا کالا reason=missing-container
+2026-04-15 21:42:54 | WARNING | core.extractor | step2.field.missing field=شناسه عمومی occurrence=1
+2026-04-15 21:42:54 | WARNING | core.extractor | step2.field.final_empty field=شناسه عمومی reason=missing-container
+2026-04-15 21:42:54 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-15 21:42:54 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-15 21:42:54 | INFO | core.extractor | step2.brand.skip reason=missing
+2026-04-15 21:42:54 | INFO | core.extractor | step2.fill.brand product=کانتور selected=
+2026-04-15 21:42:54 | INFO | core.extractor | step2.model.skip reason=missing
+2026-04-15 21:42:54 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 120, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 39, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 48, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 364, in _advance_to_step3
+    continue_button=self.wait.until(EC.element_to_be_clickable((By.XPATH,f"//button[.//div[normalize-space()='{CONTINUE_TEXT}']]")))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 514, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 816, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:42:54 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-15 21:42:54 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:42:56 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:42:58 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:43:00 | ERROR | core.worker | Navigation failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10918 | last_error=Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:44:50 | INFO | core.logging_config | ============================================================
+2026-04-15 21:44:50 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:44:50 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:44:50 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:44:50 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:44:50 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:44:50 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:44:52 | INFO | core.logging_config | ============================================================
+2026-04-15 21:44:52 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:44:52 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:44:52 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:44:52 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:44:52 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:44:52 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:44:52 | INFO | ui.main_window | Application started
+2026-04-15 21:44:53 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:44:58 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:44:58 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:44:58 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:44:58 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:45:00 | INFO | core.session | navigating to Digikala
+2026-04-15 21:45:03 | INFO | core.session | login confirmed
+2026-04-15 21:45:03 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:45:22 | INFO | core.logging_config | ============================================================
+2026-04-15 21:45:22 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:45:22 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:45:22 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:45:22 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:45:23 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:45:23 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:45:25 | INFO | core.logging_config | ============================================================
+2026-04-15 21:45:25 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 21:45:25 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 21:45:25 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 21:45:25 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 21:45:25 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 21:45:25 | INFO | core.logging_config | Frozen: False
+2026-04-15 21:45:25 | INFO | ui.main_window | Application started
+2026-04-15 21:45:25 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:45:36 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:45:36 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:45:36 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:45:36 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:45:36 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:45:38 | INFO | core.session | navigating to Digikala
+2026-04-15 21:45:41 | INFO | core.session | login required
+2026-04-15 21:45:41 | INFO | core.session | waiting for user login
+2026-04-15 21:46:03 | INFO | core.session | Browser was closed before login completed
+2026-04-15 21:46:11 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:46:11 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:46:11 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:46:11 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:46:13 | INFO | core.session | navigating to Digikala
+2026-04-15 21:46:15 | INFO | core.session | login required
+2026-04-15 21:46:15 | INFO | core.session | waiting for user login
+2026-04-15 21:46:43 | INFO | core.session | login confirmed
+2026-04-15 21:46:43 | INFO | core.worker | login_only.start
+2026-04-15 21:46:43 | INFO | core.worker | login_only.login_confirmed
+2026-04-15 21:46:43 | INFO | core.worker | login_only.complete
+2026-04-15 21:46:45 | INFO | ui.main_window | ui.state.ready_after_login_only
+2026-04-15 21:47:01 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:47:01 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:47:01 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:47:01 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:47:01 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:47:03 | INFO | core.session | navigating to Digikala
+2026-04-15 21:47:06 | INFO | core.session | login confirmed
+2026-04-15 21:47:06 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:47:06 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:47:06 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-15 21:47:07 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:47:08 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:47:09 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-15 21:47:09 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-15 21:47:10 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:47:18 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:47:19 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-15 21:47:20 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:47:22 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:47:23 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-15 21:47:24 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:47:32 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:47:32 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-15 21:47:34 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 21:47:41 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:47:42 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-15 21:47:42 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-15 21:47:42 | INFO | core.extractor | step2.brand.required
+2026-04-15 21:47:42 | INFO | core.extractor | step2.brand.opened.once
+2026-04-15 21:47:42 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-15 21:47:43 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:43 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:44 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:44 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:44 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:45 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:45 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:47:47 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-15 21:47:47 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-15 21:47:47 | INFO | core.extractor | step2.fill.brand product=کانتور selected=پاناسونیک
+2026-04-15 21:47:48 | INFO | core.extractor | step2.model.filled
+2026-04-15 21:47:48 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:47:52 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:48:01 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-15 21:48:03 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:48:12 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-15 21:48:15 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:48:24 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-15 21:48:25 | INFO | core.extractor | step2.number.filled index=1
+2026-04-15 21:48:25 | INFO | core.extractor | step2.number.filled index=2
+2026-04-15 21:48:25 | INFO | core.extractor | step2.number.filled index=3
+2026-04-15 21:48:26 | INFO | core.extractor | step2.number.filled index=4
+2026-04-15 21:48:50 | ERROR | core.worker | Task failed for https://seller.digikala.com/pwa/product/create/2?categoryId=10917: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753db2d]
+	chromedriver!(No symbol) [0x7ff7a7528ca2]
+	chromedriver!(No symbol) [0x7ff7a754f416]
+	chromedriver!(No symbol) [0x7ff7a75c70e0]
+	chromedriver!(No symbol) [0x7ff7a75e3482]
+	chromedriver!(No symbol) [0x7ff7a7589298]
+	chromedriver!(No symbol) [0x7ff7a758a183]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7a77e3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7a77e37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7a77c7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 120, in run
+    step2, step3 = extractor.extract_product(task.name)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 39, in extract_product
+    self._wait_for_step2_ready(); step2=self.extract_step2(); self.complete_step2_required_fields(product_name); step3=self.extract_step3()
+                                                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 48, in complete_step2_required_fields
+    self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
+                                                                                                     ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\extractor.py", line 364, in _advance_to_step3
+    continue_button=self.wait.until(EC.element_to_be_clickable((By.XPATH,f"//button[.//div[normalize-space()='{CONTINUE_TEXT}']]")))
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\wait.py", line 112, in until
+    value = method(self._driver)
+            ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\support\expected_conditions.py", line 514, in _predicate
+    target = driver.find_element(*target)  # grab element at locator
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 816, in find_element
+    return self.execute(Command.FIND_ELEMENT, {"using": by, "value": value})["value"]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.InvalidSessionIdException: Message: invalid session id: session deleted as the browser has closed the connection
+from disconnected: not connected to DevTools
+  (Session info: chrome=146.0.7680.180); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753db2d]
+	chromedriver!(No symbol) [0x7ff7a7528ca2]
+	chromedriver!(No symbol) [0x7ff7a754f416]
+	chromedriver!(No symbol) [0x7ff7a75c70e0]
+	chromedriver!(No symbol) [0x7ff7a75e3482]
+	chromedriver!(No symbol) [0x7ff7a7589298]
+	chromedriver!(No symbol) [0x7ff7a758a183]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!GetHandleVerifier [0x7ff7a77e3634+1e3f4]
+	chromedriver!GetHandleVerifier [0x7ff7a77e37e6+1e5a6]
+	chromedriver!GetHandleVerifier [0x7ff7a77c7e37+2bf7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:48:50 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-15 21:48:50 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:48:52 | WARNING | core.worker | Navigation retry for https://seller.digikala.com/pwa/product/create/2?categoryId=10918: Message: invalid session id; For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#invalidsessionidexception
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff7a7ab29c5+2ed785]
+	chromedriver!GetHandleVerifier [0x7ff7a77da0d0+14e90]
+	chromedriver!(No symbol) [0x7ff7a753d916]
+	chromedriver!(No symbol) [0x7ff7a7588313]
+	chromedriver!(No symbol) [0x7ff7a75bfe92]
+	chromedriver!(No symbol) [0x7ff7a75ba011]
+	chromedriver!(No symbol) [0x7ff7a75b92c3]
+	chromedriver!(No symbol) [0x7ff7a7506565]
+	chromedriver!GetHandleVerifier [0x7ff7a7adde0d+318bcd]
+	chromedriver!GetHandleVerifier [0x7ff7a7ad8588+313348]
+	chromedriver!GetHandleVerifier [0x7ff7a7af9d7a+334b3a]
+	chromedriver!GetHandleVerifier [0x7ff7a77f6785+31545]
+	chromedriver!GetHandleVerifier [0x7ff7a77ffacc+3a88c]
+	chromedriver!(No symbol) [0x7ff7a750532a]
+	chromedriver!GetHandleVerifier [0x7ff7a7c34b48+46f908]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-15 21:49:03 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 21:49:03 | INFO | core.worker | Launching browser runtime
+2026-04-15 21:49:03 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 21:49:03 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 21:49:03 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 21:49:05 | INFO | core.session | navigating to Digikala
+2026-04-15 21:49:07 | INFO | core.session | login confirmed
+2026-04-15 21:49:07 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 21:49:07 | INFO | core.worker | Processing 1/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:49:08 | INFO | core.extractor | extract.start product=کانتور url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917 page_state=step2
+2026-04-15 21:49:09 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10917
+2026-04-15 21:49:09 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:49:10 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-15 21:49:10 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-15 21:49:12 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:49:20 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:49:20 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-15 21:49:22 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:49:23 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:49:24 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-15 21:49:25 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:49:33 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:49:34 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-15 21:49:35 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 21:49:43 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:49:43 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-15 21:49:43 | INFO | core.extractor | step2.fill.start product=کانتور
+2026-04-15 21:49:43 | INFO | core.extractor | step2.brand.required
+2026-04-15 21:49:43 | INFO | core.extractor | step2.brand.opened.once
+2026-04-15 21:49:43 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-15 21:49:44 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:45 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:45 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:45 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:46 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:46 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:47 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:49:49 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-15 21:49:49 | INFO | core.extractor | step2.brand.selected.confirmed value=رمینگتون
+2026-04-15 21:49:49 | INFO | core.extractor | step2.fill.brand product=کانتور selected=رمینگتون
+2026-04-15 21:49:49 | INFO | core.extractor | step2.model.filled
+2026-04-15 21:49:49 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:49:52 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:49:59 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-15 21:50:01 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:50:09 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-15 21:50:10 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:50:17 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-15 21:50:19 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 21:50:26 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-15 21:50:27 | INFO | core.extractor | step2.number.filled index=1
+2026-04-15 21:50:27 | INFO | core.extractor | step2.number.filled index=2
+2026-04-15 21:50:27 | INFO | core.extractor | step2.number.filled index=3
+2026-04-15 21:50:28 | INFO | core.extractor | step2.number.filled index=4
+2026-04-15 21:50:28 | INFO | core.extractor | step2.continue.clicked
+2026-04-15 21:50:30 | INFO | core.extractor | step3.expand.clicked
+2026-04-15 21:50:30 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7044591
+2026-04-15 21:50:30 | INFO | core.extractor | step2.fill.done product=کانتور
+2026-04-15 21:50:31 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7044591
+2026-04-15 21:50:31 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10917&draftProductId=7044591
+2026-04-15 21:50:32 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=9
+2026-04-15 21:50:32 | INFO | core.extractor | step3.field.detected field=سازگار با نوع پوست type=single-select
+2026-04-15 21:50:33 | INFO | core.extractor | trigger.valid field=سازگار با نوع پوست candidate=انتخاب کنید
+2026-04-15 21:50:41 | INFO | core.extractor | step3.field.attempt field=سازگار با نوع پوست type=single-select attempt=1 popper_detected=True option_count=9 valid=True
+2026-04-15 21:50:42 | INFO | core.extractor | step3.field.detected field=جلوه رنگ type=multi-select
+2026-04-15 21:50:44 | INFO | core.extractor | trigger.valid field=جلوه رنگ candidate=انتخاب کنید
+2026-04-15 21:50:51 | INFO | core.extractor | step3.field.attempt field=جلوه رنگ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-15 21:50:52 | INFO | core.extractor | step3.field.detected field=نوع کانتور type=multi-select
+2026-04-15 21:50:53 | INFO | core.extractor | trigger.valid field=نوع کانتور candidate=انتخاب کنید
+2026-04-15 21:51:01 | INFO | core.extractor | step3.field.attempt field=نوع کانتور type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:51:02 | INFO | core.extractor | step3.field.detected field=کشور مبدا برند type=single-select
+2026-04-15 21:51:03 | INFO | core.extractor | trigger.valid field=کشور مبدا برند candidate=انتخاب کنید
+2026-04-15 21:51:13 | INFO | core.extractor | step3.field.attempt field=کشور مبدا برند type=single-select attempt=1 popper_detected=True option_count=45 valid=True
+2026-04-15 21:51:14 | INFO | core.extractor | step3.field.detected field=نوع محفظه type=single-select
+2026-04-15 21:51:15 | INFO | core.extractor | trigger.valid field=نوع محفظه candidate=انتخاب کنید
+2026-04-15 21:51:23 | INFO | core.extractor | step3.field.attempt field=نوع محفظه type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:51:24 | INFO | core.extractor | step3.field.detected field=صادرکننده مجوز type=single-select
+2026-04-15 21:51:25 | INFO | core.extractor | trigger.valid field=صادرکننده مجوز candidate=انتخاب کنید
+2026-04-15 21:51:33 | INFO | core.extractor | step3.field.attempt field=صادرکننده مجوز type=single-select attempt=1 popper_detected=True option_count=1 valid=True
+2026-04-15 21:51:33 | INFO | core.extractor | step3.field.detected field=کارایی محصول type=multi-select
+2026-04-15 21:51:35 | INFO | core.extractor | trigger.valid field=کارایی محصول candidate=انتخاب کنید
+2026-04-15 21:51:43 | INFO | core.extractor | step3.field.attempt field=کارایی محصول type=multi-select attempt=1 popper_detected=True option_count=13 valid=True
+2026-04-15 21:51:44 | INFO | core.extractor | step3.field.detected field=مناسب برای رنگ پوست type=multi-select
+2026-04-15 21:51:46 | INFO | core.extractor | trigger.valid field=مناسب برای رنگ پوست candidate=انتخاب کنید
+2026-04-15 21:51:53 | INFO | core.extractor | step3.field.attempt field=مناسب برای رنگ پوست type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
+2026-04-15 21:51:54 | INFO | core.extractor | step3.field.detected field=پوشانندگی type=single-select
+2026-04-15 21:51:56 | INFO | core.extractor | trigger.valid field=پوشانندگی candidate=انتخاب کنید
+2026-04-15 21:52:03 | INFO | core.extractor | step3.field.attempt field=پوشانندگی type=single-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-15 21:52:04 | INFO | core.extractor | step3.optional.expand.start existing_fields=9
+2026-04-15 21:52:04 | INFO | core.extractor | step3.optional.expand.skipped already_open
+2026-04-15 21:52:04 | INFO | core.extractor | step3.optional.scan.start existing_fields=9
+2026-04-15 21:52:05 | INFO | core.extractor | step3.optional.scan.done count=0
+2026-04-15 21:52:05 | INFO | core.extractor | step3.aggregate.done count=9
+2026-04-15 21:52:05 | INFO | core.extractor | extract.done product=کانتور step2_fields=4 step3_fields=9
+2026-04-15 21:52:05 | INFO | core.extractor | save.step2.rows count=4
+2026-04-15 21:52:05 | INFO | core.extractor | save.step3.rows count=9
+2026-04-15 21:52:05 | INFO | core.worker | Processing 2/2 | https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-15 21:52:05 | INFO | core.extractor | extract.start product=هایلایتر url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918 page_state=step2
+2026-04-15 21:52:06 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=10918
+2026-04-15 21:52:06 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:52:07 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-15 21:52:08 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-15 21:52:09 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:52:17 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:52:17 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-15 21:52:19 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:52:26 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:52:27 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-15 21:52:28 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:52:36 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:52:37 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-15 21:52:38 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 21:52:46 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 21:52:46 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-15 21:52:46 | INFO | core.extractor | step2.fill.start product=هایلایتر
+2026-04-15 21:52:46 | INFO | core.extractor | step2.brand.required
+2026-04-15 21:52:46 | INFO | core.extractor | step2.brand.opened.once
+2026-04-15 21:52:46 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-15 21:52:47 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:47 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:48 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:48 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:49 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:49 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:49 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:50 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 21:52:52 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-15 21:52:52 | INFO | core.extractor | step2.brand.selected.confirmed value=نیوآ
+2026-04-15 21:52:52 | INFO | core.extractor | step2.fill.brand product=هایلایتر selected=نیوآ
+2026-04-15 21:52:53 | INFO | core.extractor | step2.model.filled
+2026-04-15 21:52:53 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 21:52:55 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 21:53:02 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-15 21:53:04 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 21:53:12 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-15 21:53:13 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 21:53:21 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-15 21:53:22 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 21:53:30 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-15 21:53:30 | INFO | core.extractor | step2.number.filled index=1
+2026-04-15 21:53:30 | INFO | core.extractor | step2.number.filled index=2
+2026-04-15 21:53:31 | INFO | core.extractor | step2.number.filled index=3
+2026-04-15 21:53:31 | INFO | core.extractor | step2.number.filled index=4
+2026-04-15 21:53:31 | INFO | core.extractor | step2.continue.clicked
+2026-04-15 21:53:45 | INFO | core.extractor | step3.expand.skip reason=missing-button
+2026-04-15 21:53:46 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7044598
+2026-04-15 21:53:46 | INFO | core.extractor | step2.fill.done product=هایلایتر
+2026-04-15 21:53:46 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7044598
+2026-04-15 21:53:47 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=10918&draftProductId=7044598
+2026-04-15 21:53:47 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=5
+2026-04-15 21:53:48 | INFO | core.extractor | step3.field.detected field=مشخصات محصول type=single-select
+2026-04-15 21:53:49 | INFO | core.extractor | trigger.valid field=مشخصات محصول candidate=انتخاب کنید
+2026-04-15 21:53:58 | INFO | core.extractor | step3.field.attempt field=مشخصات محصول type=single-select attempt=1 popper_detected=True option_count=23 valid=True
+2026-04-15 21:53:58 | INFO | core.extractor | step3.field.detected field=سازگار با نوع پوست type=single-select
+2026-04-15 21:54:00 | INFO | core.extractor | trigger.valid field=سازگار با نوع پوست candidate=انتخاب کنید
+2026-04-15 21:54:08 | INFO | core.extractor | step3.field.attempt field=سازگار با نوع پوست type=single-select attempt=1 popper_detected=True option_count=9 valid=True
+2026-04-15 21:54:08 | INFO | core.extractor | step3.field.detected field=جلوه رنگ type=multi-select
+2026-04-15 21:54:09 | INFO | core.extractor | trigger.valid field=جلوه رنگ candidate=انتخاب کنید
+2026-04-15 21:54:17 | INFO | core.extractor | step3.field.attempt field=جلوه رنگ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-15 21:54:18 | INFO | core.extractor | step3.field.detected field=نوع هایلایتر type=multi-select
+2026-04-15 21:54:19 | INFO | core.extractor | trigger.valid field=نوع هایلایتر candidate=انتخاب کنید
+2026-04-15 21:54:27 | INFO | core.extractor | step3.field.attempt field=نوع هایلایتر type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 21:54:28 | INFO | core.extractor | step3.field.detected field=تناژ رنگ type=multi-select
+2026-04-15 21:54:29 | INFO | core.extractor | trigger.valid field=تناژ رنگ candidate=انتخاب کنید
+2026-04-15 21:54:31 | INFO | core.extractor | step3.field.attempt field=تناژ رنگ type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
+2026-04-15 21:54:31 | INFO | core.extractor | step3.optional.expand.start existing_fields=5
+2026-04-15 21:54:32 | INFO | core.extractor | step3.optional.button.found tag=div text=پر کردن اطلاعات بیشتر
+2026-04-15 21:54:32 | INFO | core.extractor | step3.optional.button.click
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.expand.confirmed
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.expand.clicked
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.scan.start existing_fields=5
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.field.detected field=کشور مبدا برند type=single-select
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.field.detected field=صادرکننده مجوز type=single-select
+2026-04-15 21:54:33 | INFO | core.extractor | step3.optional.field.detected field=کارایی محصول type=multi-select
+2026-04-15 21:54:34 | INFO | core.extractor | step3.optional.field.detected field=مناسب برای رنگ پوست type=multi-select
+2026-04-15 21:54:34 | INFO | core.extractor | step3.optional.scan.done count=4
+2026-04-15 21:54:34 | INFO | core.extractor | step3.field.detected field=کشور مبدا برند type=single-select
+2026-04-15 21:54:35 | INFO | core.extractor | trigger.valid field=کشور مبدا برند candidate=انتخاب کنید
+2026-04-15 21:54:45 | INFO | core.extractor | step3.field.attempt field=کشور مبدا برند type=single-select attempt=1 popper_detected=True option_count=45 valid=True
+2026-04-15 21:54:46 | INFO | core.extractor | step3.field.detected field=صادرکننده مجوز type=single-select
+2026-04-15 21:54:47 | INFO | core.extractor | trigger.valid field=صادرکننده مجوز candidate=انتخاب کنید
+2026-04-15 21:54:55 | INFO | core.extractor | step3.field.attempt field=صادرکننده مجوز type=single-select attempt=1 popper_detected=True option_count=1 valid=True
+2026-04-15 21:54:56 | INFO | core.extractor | step3.field.detected field=کارایی محصول type=multi-select
+2026-04-15 21:54:57 | INFO | core.extractor | trigger.valid field=کارایی محصول candidate=انتخاب کنید
+2026-04-15 21:54:59 | INFO | core.extractor | step3.field.attempt field=کارایی محصول type=multi-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-15 21:55:00 | INFO | core.extractor | step3.field.detected field=مناسب برای رنگ پوست type=multi-select
+2026-04-15 21:55:01 | INFO | core.extractor | trigger.valid field=مناسب برای رنگ پوست candidate=انتخاب کنید
+2026-04-15 21:55:09 | INFO | core.extractor | step3.field.attempt field=مناسب برای رنگ پوست type=multi-select attempt=1 popper_detected=True option_count=6 valid=True
+2026-04-15 21:55:10 | INFO | core.extractor | step3.aggregate.done count=9
+2026-04-15 21:55:10 | INFO | core.extractor | extract.done product=هایلایتر step2_fields=4 step3_fields=9
+2026-04-15 21:55:10 | INFO | core.extractor | save.step2.rows count=4
+2026-04-15 21:55:10 | INFO | core.extractor | save.step3.rows count=9
+2026-04-15 22:02:58 | INFO | core.logging_config | ============================================================
+2026-04-15 22:02:58 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 22:02:58 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 22:02:58 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 22:02:58 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 22:02:58 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 22:02:58 | INFO | core.logging_config | Frozen: False
+2026-04-15 22:03:01 | INFO | core.logging_config | ============================================================
+2026-04-15 22:03:01 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 22:03:01 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 22:03:01 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 22:03:01 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 22:03:01 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 22:03:01 | INFO | core.logging_config | Frozen: False
+2026-04-15 22:03:01 | INFO | ui.main_window | Application started
+2026-04-15 22:03:02 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 22:03:15 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-15 22:03:30 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-15 22:03:30 | INFO | core.worker | Launching browser runtime
+2026-04-15 22:03:30 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-15 22:03:30 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-15 22:03:30 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-15 22:03:32 | INFO | core.session | navigating to Digikala
+2026-04-15 22:03:35 | INFO | core.session | login confirmed
+2026-04-15 22:03:35 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-15 22:03:35 | INFO | core.worker | Processing 1/1 | https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-15 22:03:35 | INFO | core.extractor | extract.start product=هدست url=https://seller.digikala.com/pwa/product/create/2?categoryId=211 page_state=step2
+2026-04-15 22:03:36 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-15 22:03:37 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 22:03:38 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-15 22:03:38 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-15 22:03:39 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 22:03:47 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-15 22:03:48 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-15 22:03:49 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 22:03:57 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=13 valid=True
+2026-04-15 22:03:58 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-15 22:03:59 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 22:04:07 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 22:04:07 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-15 22:04:09 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 22:04:17 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-15 22:04:17 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-15 22:04:17 | INFO | core.extractor | step2.fill.start product=هدست
+2026-04-15 22:04:17 | INFO | core.extractor | step2.brand.required
+2026-04-15 22:04:17 | INFO | core.extractor | step2.brand.opened.once
+2026-04-15 22:04:17 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-15 22:04:19 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 22:04:20 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 22:04:22 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 22:04:24 | INFO | core.extractor | step2.brand.settle.check
+2026-04-15 22:04:26 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-15 22:04:26 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-15 22:04:26 | INFO | core.extractor | step2.fill.brand product=هدست selected=پاناسونیک
+2026-04-15 22:04:27 | INFO | core.extractor | step2.model.filled
+2026-04-15 22:04:27 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-15 22:04:30 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-15 22:04:37 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-15 22:04:39 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-15 22:04:46 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-15 22:04:48 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-15 22:04:55 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-15 22:04:57 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-15 22:04:58 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-15 22:04:59 | INFO | core.extractor | step2.number.filled index=1
+2026-04-15 22:04:59 | INFO | core.extractor | step2.number.filled index=2
+2026-04-15 22:05:00 | INFO | core.extractor | step2.number.filled index=3
+2026-04-15 22:05:00 | INFO | core.extractor | step2.number.filled index=4
+2026-04-15 22:05:00 | INFO | core.extractor | step2.continue.clicked
+2026-04-15 22:05:01 | INFO | core.extractor | step3.expand.skip reason=missing-button
+2026-04-15 22:05:02 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7044629
+2026-04-15 22:05:02 | INFO | core.extractor | step2.fill.done product=هدست
+2026-04-15 22:05:03 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7044629
+2026-04-15 22:05:03 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7044629
+2026-04-15 22:05:04 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=10
+2026-04-15 22:05:04 | INFO | core.extractor | step3.field.detected field=نوع اتصال type=multi-select
+2026-04-15 22:05:06 | INFO | core.extractor | trigger.valid field=نوع اتصال candidate=انتخاب کنید
+2026-04-15 22:05:14 | INFO | core.extractor | step3.field.attempt field=نوع اتصال type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-15 22:05:14 | INFO | core.extractor | step3.field.detected field=رابط‌ها type=multi-select
+2026-04-15 22:05:16 | INFO | core.extractor | trigger.valid field=رابط‌ها candidate=انتخاب کنید
+2026-04-15 22:05:24 | INFO | core.extractor | step3.field.attempt field=رابط‌ها type=multi-select attempt=1 popper_detected=True option_count=22 valid=True
+2026-04-15 22:05:25 | INFO | core.extractor | step3.field.detected field=مناسب برای type=single-select
+2026-04-15 22:05:27 | INFO | core.extractor | trigger.valid field=مناسب برای candidate=انتخاب کنید
+2026-04-15 22:05:35 | INFO | core.extractor | step3.field.attempt field=مناسب برای type=single-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-15 22:05:35 | INFO | core.extractor | step3.field.detected field=نوع گوشی type=single-select
+2026-04-15 22:05:37 | INFO | core.extractor | trigger.valid field=نوع گوشی candidate=انتخاب کنید
+2026-04-15 22:05:45 | INFO | core.extractor | step3.field.attempt field=نوع گوشی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 22:05:45 | INFO | core.extractor | step3.field.detected field=نوع هدفون، هدست و هندزفری type=multi-select
+2026-04-15 22:05:47 | INFO | core.extractor | trigger.valid field=نوع هدفون، هدست و هندزفری candidate=انتخاب کنید
+2026-04-15 22:05:49 | INFO | core.extractor | step3.field.attempt field=نوع هدفون، هدست و هندزفری type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-15 22:05:50 | INFO | core.extractor | step3.field.detected field=قابلیت نویز کنسلینگ type=multi-select
+2026-04-15 22:05:51 | INFO | core.extractor | trigger.valid field=قابلیت نویز کنسلینگ candidate=انتخاب کنید
+2026-04-15 22:05:59 | INFO | core.extractor | step3.field.attempt field=قابلیت نویز کنسلینگ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 22:06:00 | INFO | core.extractor | step3.field.detected field=قابلیت‌های شارژ type=multi-select
+2026-04-15 22:06:01 | INFO | core.extractor | trigger.valid field=قابلیت‌های شارژ candidate=انتخاب کنید
+2026-04-15 22:06:09 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های شارژ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-15 22:06:10 | INFO | core.extractor | step3.field.detected field=اقلام همراه هدفون، هندزفری و هدست type=multi-select
+2026-04-15 22:06:12 | INFO | core.extractor | trigger.valid field=اقلام همراه هدفون، هندزفری و هدست candidate=انتخاب کنید
+2026-04-15 22:06:19 | INFO | core.extractor | step3.field.attempt field=اقلام همراه هدفون، هندزفری و هدست type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 22:06:20 | INFO | core.extractor | step3.field.detected field=درگاه شارژ type=multi-select
+2026-04-15 22:06:22 | INFO | core.extractor | trigger.valid field=درگاه شارژ candidate=انتخاب کنید
+2026-04-15 22:06:29 | INFO | core.extractor | step3.field.attempt field=درگاه شارژ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 22:06:30 | INFO | core.extractor | step3.field.detected field=ویژگی‌های خاص type=multi-select
+2026-04-15 22:06:32 | INFO | core.extractor | trigger.valid field=ویژگی‌های خاص candidate=انتخاب کنید
+2026-04-15 22:06:40 | INFO | core.extractor | step3.field.attempt field=ویژگی‌های خاص type=multi-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-15 22:06:40 | INFO | core.extractor | step3.optional.expand.start existing_fields=10
+2026-04-15 22:06:41 | INFO | core.extractor | step3.optional.button.found tag=div text=پر کردن اطلاعات بیشتر
+2026-04-15 22:06:41 | INFO | core.extractor | step3.optional.button.click
+2026-04-15 22:06:42 | INFO | core.extractor | step3.optional.expand.confirmed
+2026-04-15 22:06:42 | INFO | core.extractor | step3.optional.expand.clicked
+2026-04-15 22:06:42 | INFO | core.extractor | step3.optional.scan.start existing_fields=10
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=جنس بدنه type=single-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=نوع کابل type=multi-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=قابلیت‌های مقاومتی type=single-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=منبع انرژی type=multi-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=نوع آکوستیک type=multi-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.field.detected field=قابلیت اتصال به چند دستگاه type=single-select
+2026-04-15 22:06:43 | INFO | core.extractor | step3.optional.scan.done count=6
+2026-04-15 22:06:44 | INFO | core.extractor | step3.field.detected field=جنس بدنه type=single-select
+2026-04-15 22:06:46 | INFO | core.extractor | trigger.valid field=جنس بدنه candidate=انتخاب کنید
+2026-04-15 22:06:54 | INFO | core.extractor | step3.field.attempt field=جنس بدنه type=single-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-15 22:06:55 | INFO | core.extractor | step3.field.detected field=نوع کابل type=multi-select
+2026-04-15 22:06:57 | INFO | core.extractor | trigger.valid field=نوع کابل candidate=انتخاب کنید
+2026-04-15 22:06:59 | INFO | core.extractor | step3.field.attempt field=نوع کابل type=multi-select attempt=1 popper_detected=True option_count=11 valid=True
+2026-04-15 22:07:00 | INFO | core.extractor | step3.field.detected field=قابلیت‌های مقاومتی type=single-select
+2026-04-15 22:07:02 | INFO | core.extractor | trigger.valid field=قابلیت‌های مقاومتی candidate=انتخاب کنید
+2026-04-15 22:07:09 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های مقاومتی type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-15 22:07:10 | INFO | core.extractor | step3.field.detected field=منبع انرژی type=multi-select
+2026-04-15 22:07:12 | INFO | core.extractor | trigger.valid field=منبع انرژی candidate=انتخاب کنید
+2026-04-15 22:07:20 | INFO | core.extractor | step3.field.attempt field=منبع انرژی type=multi-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-15 22:07:21 | INFO | core.extractor | step3.field.detected field=نوع آکوستیک type=multi-select
+2026-04-15 22:07:23 | INFO | core.extractor | trigger.valid field=نوع آکوستیک candidate=انتخاب کنید
+2026-04-15 22:07:25 | INFO | core.extractor | step3.field.attempt field=نوع آکوستیک type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-15 22:07:26 | INFO | core.extractor | step3.field.detected field=قابلیت اتصال به چند دستگاه type=single-select
+2026-04-15 22:07:28 | INFO | core.extractor | trigger.valid field=قابلیت اتصال به چند دستگاه candidate=انتخاب کنید
+2026-04-15 22:07:35 | INFO | core.extractor | step3.field.attempt field=قابلیت اتصال به چند دستگاه type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-15 22:07:35 | INFO | core.extractor | step3.aggregate.done count=16
+2026-04-15 22:07:35 | INFO | core.extractor | extract.done product=هدست step2_fields=4 step3_fields=16
+2026-04-15 22:07:35 | INFO | core.extractor | save.step2.rows count=4
+2026-04-15 22:07:35 | INFO | core.extractor | save.step3.rows count=16
+2026-04-15 23:43:44 | INFO | core.logging_config | ============================================================
+2026-04-15 23:43:44 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 23:43:44 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 23:43:44 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 23:43:44 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 23:43:44 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 23:43:44 | INFO | core.logging_config | Frozen: False
+2026-04-15 23:43:47 | INFO | core.logging_config | ============================================================
+2026-04-15 23:43:47 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 23:43:47 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 23:43:47 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 23:43:47 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 23:43:47 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 23:43:47 | INFO | core.logging_config | Frozen: False
+2026-04-15 23:43:47 | INFO | ui.main_window | Application started
+2026-04-15 23:43:47 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-15 23:49:07 | INFO | core.logging_config | ============================================================
+2026-04-15 23:49:07 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 23:49:07 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 23:49:07 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 23:49:07 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 23:49:07 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 23:49:07 | INFO | core.logging_config | Frozen: False
+2026-04-15 23:49:09 | INFO | core.logging_config | ============================================================
+2026-04-15 23:49:09 | INFO | core.logging_config | DKExtractor startup
+2026-04-15 23:49:09 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-15 23:49:09 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-15 23:49:09 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-15 23:49:09 | INFO | core.logging_config | Platform: Windows 10
+2026-04-15 23:49:09 | INFO | core.logging_config | Frozen: False
+2026-04-15 23:49:09 | INFO | ui.main_window | Application started
+2026-04-15 23:49:10 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0

@@ -32,7 +32,7 @@ logger = logging.getLogger(__name__)
 class MainWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("DKExtractor")
+        self.setWindowTitle("Dr.Siamak Karimi/Extractor")
         self.resize(1200, 760)
 
         self.tasks: list[ExtractionTask] = []
@@ -254,6 +254,8 @@ class MainWindow(QMainWindow):
 
     def cleanup_worker(self) -> None:
         self._set_idle_state()
+        if self._active_login_only and not self._job_failed:
+            logger.info("ui.state.ready_after_login_only")
         self._active_login_only = False
         self.worker = None
         self.worker_thread = None
