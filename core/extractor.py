@@ -41,7 +41,14 @@ class Extractor:
         logger.info("step2.fill.start product=%s",product_name); selected=self._select_brand(); logger.info("step2.fill.brand product=%s selected=%s",product_name,selected or "")
         self._fill_model_input(); self._fill_remaining_general_dropdowns(); self._fill_numeric_inputs(); self._advance_to_step3(); logger.info("step2.fill.done product=%s",product_name)
     def extract_step3(self)->list[dict[str,list[str]]]:
-        self._ensure_step3_panel_open(); self._wait_for_step3_ready(); refs=self._list_step3_fields(); logger.info("step3.scan.start page_state=%s field_count=%s",self._page_state(),len(refs)); return self._extract_fields(refs,"step3")
+        self._ensure_step3_panel_open(); self._wait_for_step3_ready()
+        initial_refs=self._list_step3_fields()
+        logger.info("step3.scan.start page_state=%s field_count=%s",self._page_state(),len(initial_refs))
+        results=self._extract_fields(initial_refs,"step3")
+        optional_refs=self._expand_and_list_step3_optional_fields(initial_refs)
+        if optional_refs:
+            results.extend(self._extract_fields(optional_refs,"step3"))
+        return results
     def save(self,name:str,step2:list[dict[str,list[str]]],step3:list[dict[str,list[str]]])->None:
         ensure_app_dirs(); out=output_dir(); ts=datetime.now().isoformat(timespec="seconds")
         self._append_rows(out/"step2.csv",STEP2_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step2])
@@ -107,6 +114,32 @@ class Extractor:
             label=self._find_label_text(container)
             if not label: continue
             counters[label]+=1; fields.append({"label":label,"occurrence":counters[label]})
+        return fields
+    def _expand_and_list_step3_optional_fields(self,existing_refs:list[dict[str,object]])->list[dict[str,object]]:
+        known_keys={self._step3_ref_key(ref) for ref in existing_refs}; before_count=len(known_keys)
+        logger.info("step3.optional.expand.start existing_fields=%s",before_count)
+        expand_state=self._expand_step3_optional_section(before_count)
+        if expand_state=="already_open":
+            logger.info("step3.optional.expand.skipped already_open")
+        elif expand_state=="clicked":
+            logger.info("step3.optional.expand.clicked")
+        else:
+            logger.info("step3.optional.expand.skipped reason=%s",expand_state)
+            return []
+        logger.info("step3.optional.scan.start existing_fields=%s",before_count)
+        fields=[]; counters=Counter()
+        for container in self._find_elements(By.XPATH,SPEC_FIELD_XPATH):
+            if not self._is_visible(container): continue
+            label=self._find_label_text(container)
+            if not label: continue
+            counters[label]+=1
+            ref={"label":label,"occurrence":counters[label]}
+            ref_key=self._step3_ref_key(ref)
+            if ref_key in known_keys: continue
+            field_type=self._detect_dropdown_type(container)
+            logger.info("step3.optional.field.detected field=%s type=%s",label,field_type)
+            known_keys.add(ref_key); fields.append(ref)
+        logger.info("step3.optional.scan.done count=%s",len(fields))
         return fields
     def _locate_field_container(self,stage:str,label:str,occurrence:int)->WebElement|None:
         xpath=GENERAL_INFO_CONTAINER_XPATH if stage=="step2" else SPEC_FIELD_XPATH
@@ -378,6 +411,21 @@ class Extractor:
         expand_buttons=[b for b in self._find_elements(By.XPATH,STEP3_EXPAND_BUTTON_XPATH) if self._is_visible(b)]
         if not expand_buttons: logger.info("step3.expand.skip reason=missing-button"); return
         expand_button=expand_buttons[0]; self._scroll_into_view(expand_button); self._js_click(expand_button); logger.info("step3.expand.clicked"); self.wait.until(lambda _:self._step3_fields_ready())
+    def _expand_step3_optional_section(self,baseline_count:int)->str:
+        expand_buttons=[b for b in self._find_elements(By.XPATH,STEP3_EXPAND_BUTTON_XPATH) if self._is_visible(b)]
+        if not expand_buttons:
+            current_count=len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])
+            return "already_open" if current_count>baseline_count else "missing-button"
+        expand_button=expand_buttons[0]
+        self._scroll_into_view(expand_button); self._js_click(expand_button)
+        try:
+            self.wait.until(lambda _ : len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])>baseline_count)
+            return "clicked"
+        except TimeoutException:
+            current_count=len([c for c in self._find_elements(By.XPATH,SPEC_FIELD_XPATH) if self._is_visible(c)])
+            return "already_open" if current_count>baseline_count else "no-new-fields"
+    def _step3_ref_key(self,ref:dict[str,object])->tuple[str,int]:
+        return self._normalize_label(str(ref["label"])),int(ref["occurrence"])
     def _is_disabled(self,element:WebElement)->bool:
         try: bg_color=(element.value_of_css_property("background-color") or "").strip().lower()
         except Exception: bg_color=""
