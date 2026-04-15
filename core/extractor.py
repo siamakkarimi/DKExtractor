@@ -25,7 +25,10 @@ BRAND_WAIT_SECONDS=12
 GENERAL_INFO_CONTAINER_XPATH="//div[contains(@class,'FormComponentFrame__input-container')][.//span[normalize-space()='"+PLACEHOLDER_TEXT+"'] or .//input[@name='brand_id']]"
 SPEC_FIELD_XPATH="//label[contains(@class,'DropDown__container') or contains(@class,'DropDownMultiple__container')]"
 POPPER_XPATH="//div[(@data-popper-placement or @role='list' or contains(@class,'DropDown__popper__') or contains(@class,'DropDownMultiple__popper__')) and not(contains(@style,'display: none'))]"
-STEP3_EXPAND_TEXT_NODE_XPATH=f"//*[self::button or self::div or self::span or self::p][contains(normalize-space(),'{STEP3_EXPAND_TEXT}')]"
+STEP3_EXPAND_EXACT_NODE_XPATH=f"//*[self::button or self::div or self::span or self::p][normalize-space(text())='{STEP3_EXPAND_TEXT}']"
+STEP3_EXPAND_FALLBACK_NODE_XPATH=f"//*[self::button or self::div or self::span or self::p][contains(normalize-space(text()),'{STEP3_EXPAND_TEXT}')]"
+STEP3_EXPAND_MAX_TEXT_LENGTH=120
+STEP3_EXPAND_MAX_ANCESTOR_DEPTH=3
 
 class Extractor:
     def __init__(self,driver):
@@ -447,22 +450,42 @@ class Extractor:
             return True
         return self._find_step3_expand_click_target() is None and len(current_keys)>=baseline_count
     def _find_step3_expand_click_target(self)->WebElement|None:
-        for node in self._find_elements(By.XPATH,STEP3_EXPAND_TEXT_NODE_XPATH):
-            if not self._is_visible(node): continue
-            target=self._resolve_clickable_ancestor(node)
-            if target is None or not self._is_visible(target) or self._is_disabled(target): continue
-            return target
+        for xpath in [STEP3_EXPAND_EXACT_NODE_XPATH,STEP3_EXPAND_FALLBACK_NODE_XPATH]:
+            for node in self._find_elements(By.XPATH,xpath):
+                if not self._is_visible(node): continue
+                target=self._resolve_clickable_ancestor(node)
+                if target is None or not self._is_visible(target) or self._is_disabled(target): continue
+                return target
         return None
     def _resolve_clickable_ancestor(self,node:WebElement)->WebElement|None:
-        candidates=[node]
-        for candidate in node.find_elements(By.XPATH,"./ancestor-or-self::*[@role='button' or @role='link' or @tabindex='0' or self::button or self::a or contains(@class,'cursor-pointer') or contains(@class,'pointer')][1]"):
-            if candidate not in candidates: candidates.append(candidate)
-        for candidate in node.find_elements(By.XPATH,"./ancestor-or-self::div[1]"):
-            if candidate not in candidates: candidates.append(candidate)
-        for candidate in candidates:
-            if self._is_visible(candidate):
-                return candidate
+        for candidate in self._nearby_clickable_candidates(node,STEP3_EXPAND_MAX_ANCESTOR_DEPTH):
+            text=self._normalize_label(self._safe_text(candidate))
+            if len(text)>STEP3_EXPAND_MAX_TEXT_LENGTH or text.count(" ")>12:
+                logger.info("step3.optional.button.rejected reason=oversized-text tag=%s text=%s",candidate.tag_name,text[:200])
+                continue
+            return candidate
         return None
+    def _nearby_clickable_candidates(self,node:WebElement,max_depth:int)->list[WebElement]:
+        candidates=[]; current=node; depth=0
+        while current is not None and depth<=max_depth:
+            if self._is_reasonable_step3_expand_candidate(current) and current not in candidates:
+                candidates.append(current)
+            parents=current.find_elements(By.XPATH,"./parent::*")
+            current=parents[0] if parents else None
+            depth+=1
+        return candidates
+    def _is_reasonable_step3_expand_candidate(self,element:WebElement)->bool:
+        if not self._is_visible(element) or self._is_disabled(element): return False
+        text=self._normalize_label(self._safe_text(element))
+        if not text or STEP3_EXPAND_TEXT not in text: return False
+        if len(text)>STEP3_EXPAND_MAX_TEXT_LENGTH: return False
+        tag=element.tag_name.lower()
+        role=(element.get_attribute("role") or "").strip().lower()
+        tabindex=(element.get_attribute("tabindex") or "").strip()
+        class_name=(element.get_attribute("class") or "").lower()
+        if text==STEP3_EXPAND_TEXT and tag in {"button","a","div","span","p"}:
+            return True
+        return role in {"button","link"} or tabindex=="0" or "cursor-pointer" in class_name or "pointer" in class_name
     def _is_disabled(self,element:WebElement)->bool:
         try: bg_color=(element.value_of_css_property("background-color") or "").strip().lower()
         except Exception: bg_color=""
