@@ -16,8 +16,9 @@ pyinstaller app\main.py ^
   --clean ^
   --onedir ^
   --noconsole ^
-  --add-data "runtime;runtime" ^
-  --add-data "data;data"
+  --add-data "runtime\chrome;runtime\chrome" ^
+  --add-data "runtime\chromedriver\chromedriver.exe;runtime\chromedriver" ^
+  --add-data "data\input.xlsx;data"
 
 echo Build completed. Output: dist\DKExtractor
 endlocal
