@@ -3954,3 +3954,310 @@ Stacktrace:
 2026-04-15 23:49:09 | INFO | core.logging_config | Frozen: False
 2026-04-15 23:49:09 | INFO | ui.main_window | Application started
 2026-04-15 23:49:10 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-16 09:26:44 | INFO | core.logging_config | ============================================================
+2026-04-16 09:26:44 | INFO | core.logging_config | DKExtractor startup
+2026-04-16 09:26:44 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-16 09:26:44 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-16 09:26:44 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-16 09:26:44 | INFO | core.logging_config | Platform: Windows 10
+2026-04-16 09:26:44 | INFO | core.logging_config | Frozen: False
+2026-04-16 09:27:00 | INFO | core.logging_config | ============================================================
+2026-04-16 09:27:00 | INFO | core.logging_config | DKExtractor startup
+2026-04-16 09:27:00 | INFO | core.logging_config | App base dir: D:\DKExtractor
+2026-04-16 09:27:00 | INFO | core.logging_config | Working dir: D:\DKExtractor
+2026-04-16 09:27:00 | INFO | core.logging_config | Python: 3.11.3 (tags/v3.11.3:f3909b8, Apr  4 2023, 23:49:59) [MSC v.1934 64 bit (AMD64)]
+2026-04-16 09:27:00 | INFO | core.logging_config | Platform: Windows 10
+2026-04-16 09:27:00 | INFO | core.logging_config | Frozen: False
+2026-04-16 09:27:00 | INFO | ui.main_window | Application started
+2026-04-16 09:27:03 | INFO | ui.main_window | Loaded input file: D:\DKExtractor\data\input.xlsx | valid=2 invalid=0
+2026-04-16 09:27:20 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-16 09:27:24 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-16 09:27:24 | INFO | core.worker | Launching browser runtime
+2026-04-16 09:27:24 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-16 09:27:24 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-16 09:27:24 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-16 09:27:27 | INFO | core.session | navigating to Digikala
+2026-04-16 09:27:30 | INFO | core.session | login confirmed
+2026-04-16 09:27:30 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-16 09:27:30 | INFO | core.worker | Processing 1/1 | https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-16 09:27:30 | INFO | core.extractor | extract.start product=هدست url=https://seller.digikala.com/pwa/product/create/2?categoryId=211 page_state=step2
+2026-04-16 09:27:31 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-16 09:27:31 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-16 09:27:32 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-16 09:27:32 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-16 09:27:34 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-16 09:27:41 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:27:42 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-16 09:27:43 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-16 09:27:51 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=13 valid=True
+2026-04-16 09:27:52 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-16 09:27:53 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-16 09:28:01 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:28:02 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-16 09:28:03 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-16 09:28:11 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-16 09:28:11 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-16 09:28:11 | INFO | core.extractor | step2.fill.start product=هدست
+2026-04-16 09:28:11 | INFO | core.extractor | step2.brand.required
+2026-04-16 09:28:12 | INFO | core.extractor | step2.brand.opened.once
+2026-04-16 09:28:12 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-16 09:28:13 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:14 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:14 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:14 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:15 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:15 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:16 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:16 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:16 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:17 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:17 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:18 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:28:20 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-16 09:28:20 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-16 09:28:20 | INFO | core.extractor | step2.fill.brand product=هدست selected=پاناسونیک
+2026-04-16 09:28:20 | INFO | core.extractor | step2.model.filled
+2026-04-16 09:28:21 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-16 09:28:23 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-16 09:28:30 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-16 09:28:33 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-16 09:28:40 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-16 09:28:41 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-16 09:28:49 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-16 09:28:50 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-16 09:28:58 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-16 09:28:59 | INFO | core.extractor | step2.number.filled index=1
+2026-04-16 09:28:59 | INFO | core.extractor | step2.number.filled index=2
+2026-04-16 09:28:59 | INFO | core.extractor | step2.number.filled index=3
+2026-04-16 09:29:00 | INFO | core.extractor | step2.number.filled index=4
+2026-04-16 09:29:00 | INFO | core.extractor | step2.continue.clicked
+2026-04-16 09:29:01 | INFO | core.extractor | step3.expand.clicked
+2026-04-16 09:29:02 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045821
+2026-04-16 09:29:02 | INFO | core.extractor | step2.fill.done product=هدست
+2026-04-16 09:29:03 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045821
+2026-04-16 09:29:03 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045821
+2026-04-16 09:29:04 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=16
+2026-04-16 09:29:05 | INFO | core.extractor | step3.field.detected field=نوع اتصال type=multi-select
+2026-04-16 09:29:06 | INFO | core.extractor | trigger.valid field=نوع اتصال candidate=انتخاب کنید
+2026-04-16 09:29:14 | INFO | core.extractor | step3.field.attempt field=نوع اتصال type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:29:15 | INFO | core.extractor | step3.field.detected field=رابط‌ها type=multi-select
+2026-04-16 09:29:16 | INFO | core.extractor | trigger.valid field=رابط‌ها candidate=انتخاب کنید
+2026-04-16 09:29:25 | INFO | core.extractor | step3.field.attempt field=رابط‌ها type=multi-select attempt=1 popper_detected=True option_count=22 valid=True
+2026-04-16 09:29:25 | INFO | core.extractor | step3.field.detected field=مناسب برای type=single-select
+2026-04-16 09:29:27 | INFO | core.extractor | trigger.valid field=مناسب برای candidate=انتخاب کنید
+2026-04-16 09:29:35 | INFO | core.extractor | step3.field.attempt field=مناسب برای type=single-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:29:36 | INFO | core.extractor | step3.field.detected field=نوع گوشی type=single-select
+2026-04-16 09:29:38 | INFO | core.extractor | trigger.valid field=نوع گوشی candidate=انتخاب کنید
+2026-04-16 09:29:46 | INFO | core.extractor | step3.field.attempt field=نوع گوشی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:29:46 | INFO | core.extractor | step3.field.detected field=نوع هدفون، هدست و هندزفری type=multi-select
+2026-04-16 09:29:48 | INFO | core.extractor | trigger.valid field=نوع هدفون، هدست و هندزفری candidate=انتخاب کنید
+2026-04-16 09:29:56 | INFO | core.extractor | step3.field.attempt field=نوع هدفون، هدست و هندزفری type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:29:57 | INFO | core.extractor | step3.field.detected field=قابلیت نویز کنسلینگ type=multi-select
+2026-04-16 09:29:59 | INFO | core.extractor | trigger.valid field=قابلیت نویز کنسلینگ candidate=انتخاب کنید
+2026-04-16 09:30:07 | INFO | core.extractor | step3.field.attempt field=قابلیت نویز کنسلینگ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:30:08 | INFO | core.extractor | step3.field.detected field=قابلیت‌های شارژ type=multi-select
+2026-04-16 09:30:09 | INFO | core.extractor | trigger.valid field=قابلیت‌های شارژ candidate=انتخاب کنید
+2026-04-16 09:30:17 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های شارژ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:30:18 | INFO | core.extractor | step3.field.detected field=اقلام همراه هدفون، هندزفری و هدست type=multi-select
+2026-04-16 09:30:20 | INFO | core.extractor | trigger.valid field=اقلام همراه هدفون، هندزفری و هدست candidate=انتخاب کنید
+2026-04-16 09:30:28 | INFO | core.extractor | step3.field.attempt field=اقلام همراه هدفون، هندزفری و هدست type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:30:29 | INFO | core.extractor | step3.field.detected field=درگاه شارژ type=multi-select
+2026-04-16 09:30:31 | INFO | core.extractor | trigger.valid field=درگاه شارژ candidate=انتخاب کنید
+2026-04-16 09:30:39 | INFO | core.extractor | step3.field.attempt field=درگاه شارژ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:30:39 | INFO | core.extractor | step3.field.detected field=ویژگی‌های خاص type=multi-select
+2026-04-16 09:30:41 | INFO | core.extractor | trigger.valid field=ویژگی‌های خاص candidate=انتخاب کنید
+2026-04-16 09:30:49 | INFO | core.extractor | step3.field.attempt field=ویژگی‌های خاص type=multi-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-16 09:30:50 | INFO | core.extractor | step3.field.detected field=جنس بدنه type=single-select
+2026-04-16 09:30:52 | INFO | core.extractor | trigger.valid field=جنس بدنه candidate=انتخاب کنید
+2026-04-16 09:31:00 | INFO | core.extractor | step3.field.attempt field=جنس بدنه type=single-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-16 09:31:01 | INFO | core.extractor | step3.field.detected field=نوع کابل type=multi-select
+2026-04-16 09:31:02 | INFO | core.extractor | trigger.valid field=نوع کابل candidate=انتخاب کنید
+2026-04-16 09:31:11 | INFO | core.extractor | step3.field.attempt field=نوع کابل type=multi-select attempt=1 popper_detected=True option_count=11 valid=True
+2026-04-16 09:31:11 | INFO | core.extractor | step3.field.detected field=قابلیت‌های مقاومتی type=single-select
+2026-04-16 09:31:13 | INFO | core.extractor | trigger.valid field=قابلیت‌های مقاومتی candidate=انتخاب کنید
+2026-04-16 09:31:21 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های مقاومتی type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:31:22 | INFO | core.extractor | step3.field.detected field=منبع انرژی type=multi-select
+2026-04-16 09:31:23 | INFO | core.extractor | trigger.valid field=منبع انرژی candidate=انتخاب کنید
+2026-04-16 09:31:32 | INFO | core.extractor | step3.field.attempt field=منبع انرژی type=multi-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-16 09:31:32 | INFO | core.extractor | step3.field.detected field=نوع آکوستیک type=multi-select
+2026-04-16 09:31:34 | INFO | core.extractor | trigger.valid field=نوع آکوستیک candidate=انتخاب کنید
+2026-04-16 09:31:42 | INFO | core.extractor | step3.field.attempt field=نوع آکوستیک type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:31:43 | INFO | core.extractor | step3.field.detected field=قابلیت اتصال به چند دستگاه type=single-select
+2026-04-16 09:31:45 | INFO | core.extractor | trigger.valid field=قابلیت اتصال به چند دستگاه candidate=انتخاب کنید
+2026-04-16 09:31:52 | INFO | core.extractor | step3.field.attempt field=قابلیت اتصال به چند دستگاه type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:31:52 | INFO | core.extractor | step3.optional.expand.start existing_fields=16
+2026-04-16 09:31:54 | INFO | core.extractor | step3.optional.expand.skipped already_open
+2026-04-16 09:31:54 | INFO | core.extractor | step3.optional.scan.start existing_fields=16
+2026-04-16 09:31:54 | INFO | core.extractor | step3.optional.scan.done count=0
+2026-04-16 09:31:54 | INFO | core.extractor | step3.aggregate.done count=16
+2026-04-16 09:31:54 | INFO | core.extractor | extract.done product=هدست step2_fields=4 step3_fields=16
+2026-04-16 09:31:54 | INFO | core.extractor | save.step2.rows count=4
+2026-04-16 09:31:54 | INFO | core.extractor | save.step3.rows count=16
+2026-04-16 09:45:47 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-16 09:45:47 | INFO | core.worker | Launching browser runtime
+2026-04-16 09:45:47 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-16 09:45:47 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-16 09:45:47 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-16 09:45:48 | INFO | core.session | navigating to Digikala
+2026-04-16 09:46:25 | WARNING | core.session | Detected blank page after initial navigation; retrying Digikala
+2026-04-16 09:46:25 | INFO | core.session | navigating to Digikala
+2026-04-16 09:46:25 | ERROR | core.worker | Worker fatal error
+Traceback (most recent call last):
+  File "D:\DKExtractor\core\worker.py", line 64, in run
+    logged_in = session.ensure_login(stop_requested=self.is_stop_requested)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\DKExtractor\core\session.py", line 75, in ensure_login
+    self._navigate_to_digikala()
+  File "D:\DKExtractor\core\session.py", line 69, in _navigate_to_digikala
+    self.driver.get(BASE_URL)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 466, in get
+    self.execute(Command.GET, {"url": url})
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\webdriver.py", line 446, in execute
+    self.error_handler.check_response(response)
+  File "C:\Users\ROBLIX\AppData\Local\Programs\Python\Python311\Lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 232, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchWindowException: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=146.0.7680.180)
+Stacktrace:
+	chromedriver!GetHandleVerifier [0x7ff68de17255+14495]
+	chromedriver!GetHandleVerifier [0x7ff68de172c0+14500]
+	chromedriver!(No symbol) [0x7ff68db8da2d]
+	chromedriver!(No symbol) [0x7ff68db640c2]
+	chromedriver!(No symbol) [0x7ff68dc16f96]
+	chromedriver!(No symbol) [0x7ff68dc33592]
+	chromedriver!(No symbol) [0x7ff68dbd9198]
+	chromedriver!(No symbol) [0x7ff68dbda083]
+	chromedriver!GetHandleVerifier [0x7ff68e12036d+31d5ad]
+	chromedriver!GetHandleVerifier [0x7ff68e11aa8d+317ccd]
+	chromedriver!GetHandleVerifier [0x7ff68e13d13a+33a37a]
+	chromedriver!GetHandleVerifier [0x7ff68de33075+302b5]
+	chromedriver!GetHandleVerifier [0x7ff68de3c1ac+393ec]
+	chromedriver!GetHandleVerifier [0x7ff68de20634+1d874]
+	chromedriver!GetHandleVerifier [0x7ff68de207e6+1da26]
+	chromedriver!GetHandleVerifier [0x7ff68de056b7+28f7]
+	KERNEL32!BaseThreadInitThunk [0x7ffde5077374+14]
+	ntdll!RtlUserThreadStart [0x7ffde543cc91+21]
+
+2026-04-16 09:47:01 | INFO | ui.main_window | Loaded input file: D:\input.xlsx | valid=1 invalid=0
+2026-04-16 09:47:01 | INFO | core.worker | Launching browser runtime
+2026-04-16 09:47:01 | INFO | core.driver | Chrome binary path: D:\DKExtractor\runtime\chrome\chrome-win64\chrome.exe
+2026-04-16 09:47:01 | INFO | core.driver | ChromeDriver path: D:\DKExtractor\runtime\chromedriver\chromedriver.exe
+2026-04-16 09:47:01 | INFO | core.driver | Chrome profile path: D:\DKExtractor\data\profiles\chrome-user-data\app-profile
+2026-04-16 09:47:03 | INFO | core.session | navigating to Digikala
+2026-04-16 09:47:06 | INFO | core.session | login confirmed
+2026-04-16 09:47:06 | INFO | core.session | Session restored from persistent Chrome profile
+2026-04-16 09:47:06 | INFO | core.worker | Processing 1/1 | https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-16 09:47:06 | INFO | core.extractor | extract.start product=هدست url=https://seller.digikala.com/pwa/product/create/2?categoryId=211 page_state=step2
+2026-04-16 09:47:07 | INFO | core.extractor | step2.ready url=https://seller.digikala.com/pwa/product/create/2?categoryId=211
+2026-04-16 09:47:08 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-16 09:47:09 | INFO | core.extractor | step2.scan.start page_state=step2 field_count=4
+2026-04-16 09:47:09 | INFO | core.extractor | step2.field.detected field=نوع کالا type=single-select
+2026-04-16 09:47:10 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-16 09:47:18 | INFO | core.extractor | step2.field.attempt field=نوع کالا type=single-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:47:18 | INFO | core.extractor | step2.field.detected field=دسته بندی کالا type=single-select
+2026-04-16 09:47:20 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-16 09:47:28 | INFO | core.extractor | step2.field.attempt field=دسته بندی کالا type=single-select attempt=1 popper_detected=True option_count=13 valid=True
+2026-04-16 09:47:28 | INFO | core.extractor | step2.field.detected field=مبدا کالا type=single-select
+2026-04-16 09:47:30 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-16 09:47:37 | INFO | core.extractor | step2.field.attempt field=مبدا کالا type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:47:38 | INFO | core.extractor | step2.field.detected field=شناسه عمومی type=single-select
+2026-04-16 09:47:39 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-16 09:47:47 | INFO | core.extractor | step2.field.attempt field=شناسه عمومی type=single-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-16 09:47:47 | INFO | core.extractor | step2.aggregate.done count=4
+2026-04-16 09:47:47 | INFO | core.extractor | step2.fill.start product=هدست
+2026-04-16 09:47:47 | INFO | core.extractor | step2.brand.required
+2026-04-16 09:47:47 | INFO | core.extractor | step2.brand.opened.once
+2026-04-16 09:47:47 | INFO | core.extractor | step2.brand.waiting_for_user
+2026-04-16 09:47:49 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:47:51 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:47:51 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:47:52 | INFO | core.extractor | step2.brand.settle.check
+2026-04-16 09:47:55 | INFO | core.extractor | step2.brand.validation.clear
+2026-04-16 09:47:55 | INFO | core.extractor | step2.brand.selected.confirmed value=پاناسونیک
+2026-04-16 09:47:55 | INFO | core.extractor | step2.fill.brand product=هدست selected=پاناسونیک
+2026-04-16 09:47:56 | INFO | core.extractor | step2.model.filled
+2026-04-16 09:47:56 | INFO | core.extractor | step2.skip.preclick field=برند یا نام سازنده کالا source=list
+2026-04-16 09:47:58 | INFO | core.extractor | trigger.valid field=نوع کالا candidate=انتخاب کنید
+2026-04-16 09:48:05 | INFO | core.extractor | step2.fill.done field=نوع کالا
+2026-04-16 09:48:07 | INFO | core.extractor | trigger.valid field=دسته بندی کالا candidate=انتخاب کنید
+2026-04-16 09:48:15 | INFO | core.extractor | step2.fill.done field=دسته بندی کالا
+2026-04-16 09:48:16 | INFO | core.extractor | trigger.valid field=مبدا کالا candidate=انتخاب کنید
+2026-04-16 09:48:23 | INFO | core.extractor | step2.fill.done field=مبدا کالا
+2026-04-16 09:48:25 | INFO | core.extractor | trigger.valid field=شناسه عمومی candidate=انتخاب کنید
+2026-04-16 09:48:32 | INFO | core.extractor | step2.fill.done field=شناسه عمومی
+2026-04-16 09:48:33 | INFO | core.extractor | step2.number.filled index=1
+2026-04-16 09:48:33 | INFO | core.extractor | step2.number.filled index=2
+2026-04-16 09:48:33 | INFO | core.extractor | step2.number.filled index=3
+2026-04-16 09:48:34 | INFO | core.extractor | step2.number.filled index=4
+2026-04-16 09:48:34 | INFO | core.extractor | step2.continue.clicked
+2026-04-16 09:48:35 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045877
+2026-04-16 09:48:35 | INFO | core.extractor | step2.fill.done product=هدست
+2026-04-16 09:48:36 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045877
+2026-04-16 09:48:37 | INFO | core.extractor | step3.ready url=https://seller.digikala.com/pwa/product/create/3?categoryId=211&draftProductId=7045877
+2026-04-16 09:48:37 | INFO | core.extractor | step3.scan.start page_state=step3 field_count=10
+2026-04-16 09:48:38 | INFO | core.extractor | step3.field.detected field=نوع اتصال type=multi-select
+2026-04-16 09:48:39 | INFO | core.extractor | trigger.valid field=نوع اتصال candidate=انتخاب کنید
+2026-04-16 09:48:47 | INFO | core.extractor | step3.field.attempt field=نوع اتصال type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:48:48 | INFO | core.extractor | step3.field.detected field=رابط‌ها type=multi-select
+2026-04-16 09:48:49 | INFO | core.extractor | trigger.valid field=رابط‌ها candidate=انتخاب کنید
+2026-04-16 09:48:58 | INFO | core.extractor | step3.field.attempt field=رابط‌ها type=multi-select attempt=1 popper_detected=True option_count=22 valid=True
+2026-04-16 09:48:58 | INFO | core.extractor | step3.field.detected field=مناسب برای type=single-select
+2026-04-16 09:49:00 | INFO | core.extractor | trigger.valid field=مناسب برای candidate=انتخاب کنید
+2026-04-16 09:49:08 | INFO | core.extractor | step3.field.attempt field=مناسب برای type=single-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:49:08 | INFO | core.extractor | step3.field.detected field=نوع گوشی type=single-select
+2026-04-16 09:49:10 | INFO | core.extractor | trigger.valid field=نوع گوشی candidate=انتخاب کنید
+2026-04-16 09:49:18 | INFO | core.extractor | step3.field.attempt field=نوع گوشی type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:49:18 | INFO | core.extractor | step3.field.detected field=نوع هدفون، هدست و هندزفری type=multi-select
+2026-04-16 09:49:20 | INFO | core.extractor | trigger.valid field=نوع هدفون، هدست و هندزفری candidate=انتخاب کنید
+2026-04-16 09:49:28 | INFO | core.extractor | step3.field.attempt field=نوع هدفون، هدست و هندزفری type=multi-select attempt=1 popper_detected=True option_count=3 valid=True
+2026-04-16 09:49:29 | INFO | core.extractor | step3.field.detected field=قابلیت نویز کنسلینگ type=multi-select
+2026-04-16 09:49:30 | INFO | core.extractor | trigger.valid field=قابلیت نویز کنسلینگ candidate=انتخاب کنید
+2026-04-16 09:49:38 | INFO | core.extractor | step3.field.attempt field=قابلیت نویز کنسلینگ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:49:39 | INFO | core.extractor | step3.field.detected field=قابلیت‌های شارژ type=multi-select
+2026-04-16 09:49:40 | INFO | core.extractor | trigger.valid field=قابلیت‌های شارژ candidate=انتخاب کنید
+2026-04-16 09:49:48 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های شارژ type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:49:49 | INFO | core.extractor | step3.field.detected field=اقلام همراه هدفون، هندزفری و هدست type=multi-select
+2026-04-16 09:49:50 | INFO | core.extractor | trigger.valid field=اقلام همراه هدفون، هندزفری و هدست candidate=انتخاب کنید
+2026-04-16 09:49:52 | INFO | core.extractor | step3.field.attempt field=اقلام همراه هدفون، هندزفری و هدست type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:49:53 | INFO | core.extractor | step3.field.detected field=درگاه شارژ type=multi-select
+2026-04-16 09:49:55 | INFO | core.extractor | trigger.valid field=درگاه شارژ candidate=انتخاب کنید
+2026-04-16 09:50:03 | INFO | core.extractor | step3.field.attempt field=درگاه شارژ type=multi-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:50:03 | INFO | core.extractor | step3.field.detected field=ویژگی‌های خاص type=multi-select
+2026-04-16 09:50:05 | INFO | core.extractor | trigger.valid field=ویژگی‌های خاص candidate=انتخاب کنید
+2026-04-16 09:50:07 | INFO | core.extractor | step3.field.attempt field=ویژگی‌های خاص type=multi-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-16 09:50:07 | INFO | core.extractor | step3.optional.expand.start existing_fields=10
+2026-04-16 09:50:08 | INFO | core.extractor | step3.optional.button.found tag=div text=پر کردن اطلاعات بیشتر
+2026-04-16 09:50:09 | INFO | core.extractor | step3.optional.button.click
+2026-04-16 09:50:09 | INFO | core.extractor | step3.optional.expand.confirmed
+2026-04-16 09:50:09 | INFO | core.extractor | step3.optional.expand.clicked
+2026-04-16 09:50:09 | INFO | core.extractor | step3.optional.scan.start existing_fields=10
+2026-04-16 09:50:10 | INFO | core.extractor | step3.optional.field.detected field=جنس بدنه type=single-select
+2026-04-16 09:50:10 | INFO | core.extractor | step3.optional.field.detected field=نوع کابل type=multi-select
+2026-04-16 09:50:10 | INFO | core.extractor | step3.optional.field.detected field=قابلیت‌های مقاومتی type=single-select
+2026-04-16 09:50:10 | INFO | core.extractor | step3.optional.field.detected field=منبع انرژی type=multi-select
+2026-04-16 09:50:10 | INFO | core.extractor | step3.optional.field.detected field=نوع آکوستیک type=multi-select
+2026-04-16 09:50:11 | INFO | core.extractor | step3.optional.field.detected field=قابلیت اتصال به چند دستگاه type=single-select
+2026-04-16 09:50:11 | INFO | core.extractor | step3.optional.scan.done count=6
+2026-04-16 09:50:11 | INFO | core.extractor | step3.field.detected field=جنس بدنه type=single-select
+2026-04-16 09:50:13 | INFO | core.extractor | trigger.valid field=جنس بدنه candidate=انتخاب کنید
+2026-04-16 09:50:21 | INFO | core.extractor | step3.field.attempt field=جنس بدنه type=single-select attempt=1 popper_detected=True option_count=10 valid=True
+2026-04-16 09:50:22 | INFO | core.extractor | step3.field.detected field=نوع کابل type=multi-select
+2026-04-16 09:50:24 | INFO | core.extractor | trigger.valid field=نوع کابل candidate=انتخاب کنید
+2026-04-16 09:50:32 | INFO | core.extractor | step3.field.attempt field=نوع کابل type=multi-select attempt=1 popper_detected=True option_count=11 valid=True
+2026-04-16 09:50:33 | INFO | core.extractor | step3.field.detected field=قابلیت‌های مقاومتی type=single-select
+2026-04-16 09:50:35 | INFO | core.extractor | trigger.valid field=قابلیت‌های مقاومتی candidate=انتخاب کنید
+2026-04-16 09:50:43 | INFO | core.extractor | step3.field.attempt field=قابلیت‌های مقاومتی type=single-select attempt=1 popper_detected=True option_count=5 valid=True
+2026-04-16 09:50:44 | INFO | core.extractor | step3.field.detected field=منبع انرژی type=multi-select
+2026-04-16 09:50:45 | INFO | core.extractor | trigger.valid field=منبع انرژی candidate=انتخاب کنید
+2026-04-16 09:50:53 | INFO | core.extractor | step3.field.attempt field=منبع انرژی type=multi-select attempt=1 popper_detected=True option_count=8 valid=True
+2026-04-16 09:50:54 | INFO | core.extractor | step3.field.detected field=نوع آکوستیک type=multi-select
+2026-04-16 09:50:56 | INFO | core.extractor | trigger.valid field=نوع آکوستیک candidate=انتخاب کنید
+2026-04-16 09:50:58 | INFO | core.extractor | step3.field.attempt field=نوع آکوستیک type=multi-select attempt=1 popper_detected=True option_count=4 valid=True
+2026-04-16 09:50:59 | INFO | core.extractor | step3.field.detected field=قابلیت اتصال به چند دستگاه type=single-select
+2026-04-16 09:51:01 | INFO | core.extractor | trigger.valid field=قابلیت اتصال به چند دستگاه candidate=انتخاب کنید
+2026-04-16 09:51:09 | INFO | core.extractor | step3.field.attempt field=قابلیت اتصال به چند دستگاه type=single-select attempt=1 popper_detected=True option_count=2 valid=True
+2026-04-16 09:51:09 | INFO | core.extractor | step3.aggregate.done count=16
+2026-04-16 09:51:09 | INFO | core.extractor | extract.done product=هدست step2_fields=4 step3_fields=16
+2026-04-16 09:51:09 | INFO | core.extractor | save.step2.rows count=4
+2026-04-16 09:51:09 | INFO | core.extractor | save.step3.rows count=16

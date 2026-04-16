@@ -42,6 +42,14 @@ def output_dir() -> Path:
     return resolve_runtime_path("data", "output")
 
 
+def first_step_fields_output_path() -> Path:
+    return output_dir() / "firstStepFields.csv"
+
+
+def category_attributes_output_path() -> Path:
+    return output_dir() / "categoryAttributes.csv"
+
+
 def input_file_path() -> Path:
     return resolve_runtime_path("data", "input.xlsx")
 

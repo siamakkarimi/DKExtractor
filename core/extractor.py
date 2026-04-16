@@ -8,7 +8,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webelement import WebElement
 from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.support.ui import WebDriverWait
-from core.paths import ensure_app_dirs,output_dir
+from core.paths import category_attributes_output_path, ensure_app_dirs, first_step_fields_output_path
 
 logger=logging.getLogger(__name__)
 STEP2_HEADERS=["timestamp","product_name","field","items_json"]
@@ -58,13 +58,13 @@ class Extractor:
         logger.info("step3.aggregate.done count=%s",len(results))
         return results
     def save(self,name:str,step2:list[dict[str,list[str]]],step3:list[dict[str,list[str]]])->None:
-        ensure_app_dirs(); out=output_dir(); ts=datetime.now().isoformat(timespec="seconds")
+        ensure_app_dirs(); ts=datetime.now().isoformat(timespec="seconds")
         step2_rows=self._dedupe_stage_rows(step2,"step2")
         step3_rows=self._dedupe_stage_rows(step3,"step3")
         logger.info("save.step2.rows count=%s",len(step2_rows))
         logger.info("save.step3.rows count=%s",len(step3_rows))
-        self._append_rows(out/"step2.csv",STEP2_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step2_rows])
-        self._append_rows(out/"step3.csv",STEP3_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step3_rows])
+        self._append_rows(first_step_fields_output_path(),STEP2_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step2_rows])
+        self._append_rows(category_attributes_output_path(),STEP3_HEADERS,[[ts,name,i["field"],json.dumps(i["items"],ensure_ascii=False)] for i in step3_rows])
     def _extract_fields(self,refs:list[dict[str,object]],stage:str)->list[dict[str,list[str]]]:
         results=[]
         for ref in refs:
