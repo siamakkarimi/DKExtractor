@@ -8,7 +8,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Callable
 
-from core.paths import app_base_dir, ensure_app_dirs, resolve_runtime_path
+from core.paths import app_base_dir, ensure_app_dirs, logs_dir
 
 
 class UiLogHandler(logging.Handler):
@@ -34,7 +34,7 @@ def _has_rotating_handler(root: logging.Logger, target: Path) -> bool:
 
 def setup_logging(ui_callback: Callable[[str], None] | None = None) -> Path:
     ensure_app_dirs()
-    log_file = resolve_runtime_path("logs", "app.log")
+    log_file = logs_dir() / "app.log"
 
     root = logging.getLogger()
     root.setLevel(logging.INFO)

@@ -16,6 +16,8 @@ pyinstaller app\main.py ^
   --clean ^
   --onedir ^
   --noconsole ^
+  --hidden-import "selenium.webdriver.chromium.webdriver" ^
+  --hidden-import "selenium.webdriver.chrome.webdriver" ^
   --add-data "runtime\chrome;runtime\chrome" ^
   --add-data "runtime\chromedriver\chromedriver.exe;runtime\chromedriver" ^
   --add-data "data\input.xlsx;data"
