@@ -8,7 +8,7 @@ from logging.handlers import RotatingFileHandler
 from pathlib import Path
 from typing import Callable
 
-from core.paths import app_base_dir, ensure_app_dirs, logs_dir
+from core.paths import app_base_dir, bundled_base_dir, ensure_app_dirs, logs_dir, writable_base_dir
 
 
 class UiLogHandler(logging.Handler):
@@ -68,6 +68,8 @@ def setup_logging(ui_callback: Callable[[str], None] | None = None) -> Path:
     logger.info("=" * 60)
     logger.info("DKExtractor startup")
     logger.info("App base dir: %s", app_base_dir())
+    logger.info("Bundled base dir: %s", bundled_base_dir())
+    logger.info("Writable base dir: %s", writable_base_dir())
     logger.info("Working dir: %s", os.getcwd())
     logger.info("Python: %s", sys.version.replace("\n", " "))
     logger.info("Platform: %s %s", platform.system(), platform.release())

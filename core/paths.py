@@ -1,5 +1,6 @@
 ﻿from __future__ import annotations
 
+import os
 import sys
 from pathlib import Path
 
@@ -16,12 +17,21 @@ def bundled_base_dir() -> Path:
     return app_base_dir()
 
 
+def writable_base_dir() -> Path:
+    if getattr(sys, "frozen", False):
+        local_appdata = os.environ.get("LOCALAPPDATA")
+        if local_appdata:
+            return Path(local_appdata).expanduser().resolve() / "DKExtractor"
+        return Path.home().resolve() / "AppData" / "Local" / "DKExtractor"
+    return app_base_dir()
+
+
 def resolve_runtime_path(*parts: str) -> Path:
     return bundled_base_dir().joinpath(*parts)
 
 
 def resolve_writable_path(*parts: str) -> Path:
-    return app_base_dir().joinpath(*parts)
+    return writable_base_dir().joinpath(*parts)
 
 
 def runtime_dir() -> Path:
