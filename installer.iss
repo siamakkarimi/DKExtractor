@@ -10,7 +10,7 @@ SolidCompression=yes
 WizardStyle=modern
 
 [Files]
-Source: "dist\DKExtractor\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
+Source: "release_dist\DKExtractor\*"; DestDir: "{app}"; Flags: recursesubdirs ignoreversion
 
 [Icons]
 Name: "{group}\DKExtractor"; Filename: "{app}\DKExtractor.exe"
