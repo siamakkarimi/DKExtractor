@@ -1,10 +1,11 @@
 [Setup]
 AppName=DKExtractor
 AppVersion=1.0.0
+SourceDir=.
 DefaultDirName={autopf}\DKExtractor
 DefaultGroupName=DKExtractor
-OutputDir=installer_output
-OutputBaseFilename=Setup_DKExtractor
+OutputDir=release_artifacts
+OutputBaseFilename=DKExtractor_Setup_1.0.0
 Compression=lzma
 SolidCompression=yes
 WizardStyle=modern

@@ -68,7 +68,7 @@
  [],
  False,
  False,
- 1776420334,
+ 1776450966,
  [('runw.exe',
    'D:\\DKExtractor\\venv\\Lib\\site-packages\\PyInstaller\\bootloader\\Windows-64bit-intel\\runw.exe',
    'EXECUTABLE')],
